@@ -4,5 +4,13 @@
     <string name="app_name">winegrower</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="soonSpraying">Ближайшее опрыскивание</string>
+    <string name="back">Расчет Баковой Смеси</string>
+    <string name="reaktiv">Препараты</string>
+    <string name="celendar">Календарь опрыскивания</string>
+    <string name="needbuy">Нужно купить</string>
+    <string name="information">Информация о прапаратах</string>
+    <string name="sorts">Сорта Винограда</string>
+    <string name="mixture">Необходимый состав баковой смеси</string>
 
 </resources>
