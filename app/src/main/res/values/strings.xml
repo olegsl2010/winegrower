@@ -12,5 +12,6 @@
     <string name="information">Информация о прапаратах</string>
     <string name="sorts">Сорта Винограда</string>
     <string name="mixture">Необходимый состав баковой смеси</string>
+    <string name="backbutt">Назад</string>
 
 </resources>
