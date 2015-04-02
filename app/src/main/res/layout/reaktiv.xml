@@ -16,18 +16,18 @@ android:scrollbars="none" >
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:weightSum="2">
+        android:weightSum="4">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/horus"
             android:id="@+id/textView1"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:id="@+id/editText1"
@@ -39,18 +39,18 @@ android:scrollbars="none" >
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:weightSum="2">
+        android:weightSum="4">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/sanmayt"
             android:id="@+id/textView2"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:id="@+id/editText2"
@@ -62,18 +62,18 @@ android:scrollbars="none" >
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:weightSum="2">
+        android:weightSum="4">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/plantafol30"
             android:id="@+id/textView3"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:id="@+id/editText3"
@@ -84,18 +84,18 @@ android:scrollbars="none" >
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:weightSum="2">
+        android:weightSum="4">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/ridomil"
             android:id="@+id/textView4"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:id="@+id/editText4"
@@ -106,18 +106,18 @@ android:scrollbars="none" >
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:weightSum="2">
+        android:weightSum="4">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/topaz"
             android:id="@+id/textView5"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:id="@+id/editText5"
@@ -127,18 +127,19 @@ android:scrollbars="none" >
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:weightSum="4">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/topsin"
             android:id="@+id/textView6"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:id="@+id/editText6"
@@ -148,18 +149,19 @@ android:scrollbars="none" >
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:weightSum="4">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/decis"
         android:id="@+id/textView7"
-        android:layout_weight="1" />
+        android:layout_weight="3" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:id="@+id/editText7"
@@ -169,18 +171,19 @@ android:scrollbars="none" >
     <LinearLayout
     android:orientation="horizontal"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content"
+        android:weightSum="4">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/vuskalKombiB"
         android:id="@+id/textView8"
-        android:layout_weight="1" />
+        android:layout_weight="3" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:id="@+id/editText8"
@@ -190,18 +193,19 @@ android:scrollbars="none" >
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:weightSum="4">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/maksikropZavyaz"
             android:id="@+id/textView9"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:id="@+id/editText9"
@@ -211,18 +215,19 @@ android:scrollbars="none" >
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:weightSum="4">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/melodiduo"
             android:id="@+id/textView10"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:id="@+id/editText10"
@@ -232,18 +237,19 @@ android:scrollbars="none" >
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:weightSum="4">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/Falkon"
             android:id="@+id/textView11"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:id="@+id/editText11"
@@ -253,18 +259,19 @@ android:scrollbars="none" >
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:weightSum="4">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/mospilan"
             android:id="@+id/textView12"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:id="@+id/editText12"
@@ -274,18 +281,19 @@ android:scrollbars="none" >
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:weightSum="4">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/strobi"
             android:id="@+id/textView13"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:id="@+id/editText13"
@@ -295,18 +303,19 @@ android:scrollbars="none" >
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:weightSum="4">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/kvadris"
             android:id="@+id/textView14"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:id="@+id/editText14"
@@ -316,18 +325,19 @@ android:scrollbars="none" >
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:weightSum="4">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/plantafol20"
             android:id="@+id/textView15"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:id="@+id/editText15"
@@ -337,18 +347,19 @@ android:scrollbars="none" >
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:weightSum="4">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/plantafol5"
             android:id="@+id/textView16"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:id="@+id/editText16"
@@ -357,14 +368,16 @@ android:scrollbars="none" >
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/backbutt"
-            android:id="@+id/backbutt" />
+            android:id="@+id/backbutt"
+            android:gravity="center_vertical|center_horizontal" />
     </LinearLayout>
 
 </LinearLayout>
