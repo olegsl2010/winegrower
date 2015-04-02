@@ -375,8 +375,8 @@ android:scrollbars="none" >
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/backbutt"
-            android:id="@+id/backbutt"
+            android:text="@string/backButton1"
+            android:id="@+id/backButton1"
             android:gravity="center_vertical|center_horizontal" />
     </LinearLayout>
 

@@ -9,10 +9,10 @@
     <string name="reaktiv">Препараты</string>
     <string name="celendar">Календарь опрыскивания</string>
     <string name="needbuy">Нужно купить</string>
-    <string name="information">Информация о прапаратах</string>
+    <string name="information">Информация о препаратах</string>
     <string name="sorts">Сорта Винограда</string>
     <string name="mixture">Необходимый состав баковой смеси</string>
-    <string name="backbutt">Назад</string>
+    <string name="backButton1">Назад</string>
     <string name="horus">Хорус</string>
     <string name="sanmayt">Санмайт</string>
     <string name="plantafol30">Плантафол 30:10:10</string>
@@ -29,5 +29,6 @@
     <string name="kvadris">Квадрис</string>
     <string name="plantafol20">Плантафол 20:20:20</string>
     <string name="plantafol5">Плантафол 5:15:45</string>
+    <string name="Назад">назад</string>
 
 </resources>
