@@ -59,7 +59,7 @@ public class PlaceholderFragment extends Fragment implements View.OnClickListene
             FragManager.replace(R.id.container, new Reaktiv());
             FragManager.commit();
         }
-else if (buttonIndex==2)
+        else if (buttonIndex==2)
         {
             FragmentTransaction FragManager = getFragmentManager().beginTransaction();
             FragManager.addToBackStack("");
@@ -94,12 +94,8 @@ else if (buttonIndex==2)
             FragManager.replace(R.id.container, new Celendar());
             FragManager.commit();
         }
-        // Временный код для получения индекса нажатой кнопки
-        Toast.makeText(getActivity(), String.valueOf(buttonIndex),
-                Toast.LENGTH_SHORT).show();
-
-
     }
+
     int translateIdToIndex(int id) {
         int index = -1;
         switch (id) {
