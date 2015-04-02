@@ -13,5 +13,21 @@
     <string name="sorts">Сорта Винограда</string>
     <string name="mixture">Необходимый состав баковой смеси</string>
     <string name="backbutt">Назад</string>
+    <string name="horus">Хорус</string>
+    <string name="sanmayt">Санмайт</string>
+    <string name="plantafol30">Плантафол 30:10:10</string>
+    <string name="ridomil">Ридомил Голд</string>
+    <string name="topaz">Топаз</string>
+    <string name="topsin">Топсин</string>
+    <string name="decis">Децис</string>
+    <string name="vuskalKombiB">Вуксал Комби Б</string>
+    <string name="maksikropZavyaz">Максикроп Завязь</string>
+    <string name="melodiduo">Мелоди Дуо</string>
+    <string name="Falkon">Фалькон</string>
+    <string name="mospilan">Моспилан</string>
+    <string name="strobi">Строби</string>
+    <string name="kvadris">Квадрис</string>
+    <string name="plantafol20">Плантафол 20:20:20</string>
+    <string name="plantafol5">Плантафол 5:15:45</string>
 
 </resources>

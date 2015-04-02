@@ -14,6 +14,7 @@ import android.widget.Button;
 
 public class MainActivity extends ActionBarActivity {
     private Fragment fragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,4 +74,5 @@ public class MainActivity extends ActionBarActivity {
         }
 
     }
+
 }
