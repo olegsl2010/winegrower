@@ -23,12 +23,13 @@
     <string name="vuskalKombiB">Вуксал Комби Б</string>
     <string name="maksikropZavyaz">Максикроп Завязь</string>
     <string name="melodiduo">Мелоди Дуо</string>
-    <string name="Falkon">Фалькон</string>
+    <string name="falkon">Фалькон</string>
     <string name="mospilan">Моспилан</string>
     <string name="strobi">Строби</string>
     <string name="kvadris">Квадрис</string>
     <string name="plantafol20">Плантафол 20:20:20</string>
     <string name="plantafol5">Плантафол 5:15:45</string>
     <string name="Назад">назад</string>
+    <string name="text">Large Text</string>
 
 </resources>

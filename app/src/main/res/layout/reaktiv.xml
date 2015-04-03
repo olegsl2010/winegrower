@@ -244,7 +244,7 @@ android:scrollbars="none" >
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/Falkon"
+            android:text="@string/falkon"
             android:id="@+id/textView11"
             android:layout_weight="3" />
 
