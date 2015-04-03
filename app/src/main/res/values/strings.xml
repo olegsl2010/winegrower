@@ -29,7 +29,11 @@
     <string name="kvadris">Квадрис</string>
     <string name="plantafol20">Плантафол 20:20:20</string>
     <string name="plantafol5">Плантафол 5:15:45</string>
-    <string name="Назад">назад</string>
-    <string name="text">Large Text</string>
+    <string name="raschetZaglavie">Варианты опрыскиваний:</string>
+    <string name="backButton2">Назад</string>
+    <string name="backButton3">Назад</string>
+    <string name="backButton5">Назад</string>
+    <string name="backButton4">Назад</string>
+    <string name="backButton6">Назад</string>
 
 </resources>
