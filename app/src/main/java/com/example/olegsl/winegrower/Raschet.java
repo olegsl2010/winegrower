@@ -28,17 +28,11 @@ public class Raschet extends Fragment{
     Button backbutt;
     int horus;
     int poss;
+    Spinner spinnerMain;
+    Spinner spinner1;
+    Spinner spinner2;
 
     public static final String APP_PREFERENCES = "winegrower";
-    String[] data = {String.valueOf(R.string.opr1),
-            String.valueOf(R.string.opr2),
-            String.valueOf(R.string.opr3),
-            String.valueOf(R.string.opr4),
-            String.valueOf(R.string.opr5),
-            String.valueOf(R.string.opr6),
-            String.valueOf(R.string.opr7),
-            String.valueOf(R.string.opr8),
-            String.valueOf(R.string.opr9)};
 
     TextView tvInfo;
     SharedPreferences mSettings;
@@ -69,23 +63,27 @@ public class Raschet extends Fragment{
             }
         });
 
-        final Spinner spinner = (Spinner) rootView.findViewById(R.id.spinnerChSpraying);
+         spinnerMain = (Spinner) rootView.findViewById(R.id.spinnerChSpraying);
+        spinner1 = (Spinner) rootView.findViewById(R.id.spinnerPrep1);
+        spinner2 = (Spinner) rootView.findViewById(R.id.spinnerPrep2);
 
-        spinner.setSelection(2);
+        spinnerMain.setSelection(2);
 //        spinner.setPrompt("Title");
 
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinnerMain.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int pos,
                                        long id) {
                 // TODO Auto-generated method stub
-                String strChoose = spinner.getSelectedItem().toString();
-                poss = spinner.getSelectedItemPosition();
+                String strChoose = spinnerMain.getSelectedItem().toString();
+                poss = spinnerMain.getSelectedItemPosition();
                 System.out.println(strChoose+ poss);
                 tvInfo.setText(strChoose+poss);
                 ((TextView) parent.getChildAt(0)).setTextColor(Color.MAGENTA);
                 ((TextView) parent.getChildAt(0)).setTextSize(20);
+                ifSelectedItem1();
+                ifSelectedItem2();
 
             }
 
@@ -95,16 +93,89 @@ public class Raschet extends Fragment{
 
             }
         });
-        ifSelectedItem();
+//        ifSelectedItem();
 
 
         return rootView;
     }
 
-    private void ifSelectedItem() {
+    private void ifSelectedItem2() {
         if (poss==0)
         {
+            spinner1.setSelection(1);
+        }
+        if (poss==1)
+        {
+            spinner1.setSelection(2);
+        }
+        if (poss==2)
+        {
+            spinner1.setSelection(0);
+        }
+        if (poss==3)
+        {
+            spinner1.setSelection(3);
+        }
+        if (poss==4)
+        {
+            spinner1.setSelection(1);
+        }
+        if (poss==5)
+        {
+            spinner1.setSelection(1);
+        }
+        if (poss==6)
+        {
+            spinner1.setSelection(5);
+        }
+        if (poss==7)
+        {
+            spinner1.setSelection(7);
+        }
+        if (poss==8)
+        {
+            spinner1.setSelection(7);
+        }
 
+
+    }
+
+    private void ifSelectedItem1() {
+        if (poss==0)
+        {
+spinner2.setSelection(1);
+        }
+        if (poss==1)
+        {
+            spinner2.setSelection(2);
+        }
+        if (poss==2)
+        {
+            spinner2.setSelection(0);
+        }
+        if (poss==3)
+        {
+            spinner2.setSelection(4);
+        }
+        if (poss==4)
+        {
+            spinner2.setSelection(4);
+        }
+        if (poss==5)
+        {
+            spinner2.setSelection(1);
+        }
+        if (poss==6)
+        {
+            spinner2.setSelection(5);
+        }
+        if (poss==7)
+        {
+            spinner2.setSelection(5);
+        }
+        if (poss==8)
+        {
+            spinner2.setSelection(0);
         }
     }
 

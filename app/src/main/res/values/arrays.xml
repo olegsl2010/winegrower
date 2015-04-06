@@ -11,7 +11,28 @@
         <item>@string/opr8</item>
         <item>@string/opr9</item>
     </string-array>
-    <string-array name="preparats" >
+    <string-array name="preparats1" >
+        <item></item>
+        <item>@string/horus</item>
+        <item>@string/ridomil</item>
+        <item>@string/melodiduo</item>
+        <item>@string/falkon</item>
+        <item>@string/strobi</item>
+        <item>@string/kvadris</item>
+        <item>@string/kuproksat</item>
+    </string-array>
+    <string-array name="preparats2" >
+        <item></item>
+        <item>@string/horus</item>
+        <item>@string/topaz</item>
+        <item>@string/topsin</item>
+        <item>@string/falkon</item>
+        <item>@string/tilt</item>
+        <item>@string/strobi</item>
+        <item>@string/kvadris</item>
+
+    </string-array>
+    <string-array name="preparats222" >
         <item></item>
         <item>@string/horus</item>
         <item>@string/sanmayt</item>
@@ -28,6 +49,8 @@
         <item>@string/strobi</item>
         <item>@string/kvadris</item>
         <item>@string/plantafol20</item>
-        <item>@string/raschetZaglavie</item>
+        <item>@string/plantafol5</item>
+        <item>@string/kuproksat</item>
+        <item>@string/tilt</item>
     </string-array>
 </resources>

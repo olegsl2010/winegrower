@@ -18,9 +18,9 @@ import android.widget.Toast;
 
 public class Reaktiv extends Fragment {
 
-    int count1, count2, count3, count4, count5, count6, count7, count8, count9, count10, count11, count12, count13, count14, count15, count16;
+    int count1, count2, count3, count4, count5, count6, count7, count8, count9, count10, count11, count12, count13, count14, count15, count16,count17,count18;
     Button backbutt;
-    EditText text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12, text13, text14, text15, text16;
+    EditText text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12, text13, text14, text15, text16,text17,text18;
     public static final String APP_PREFERENCES = "winegrower";
     SharedPreferences mSettings;
 
@@ -50,6 +50,8 @@ public class Reaktiv extends Fragment {
         text14 = (EditText) rootView.findViewById(R.id.editText14);
         text15 = (EditText) rootView.findViewById(R.id.editText15);
         text16 = (EditText) rootView.findViewById(R.id.editText16);
+        text17 = (EditText) rootView.findViewById(R.id.editText17);
+        text18 = (EditText) rootView.findViewById(R.id.editText18);
 
         values();
 
@@ -180,6 +182,18 @@ public class Reaktiv extends Fragment {
             count16 = Integer.parseInt(text16.getText().toString());
             editor.putInt(String.valueOf(R.string.plantafol5), count16);
         }
+        if (text17.getText().toString().equals("")) {
+            count17 = 0;
+        } else {
+            count17 = Integer.parseInt(text17.getText().toString());
+            editor.putInt(String.valueOf(R.string.kuproksat), count17);
+        }
+        if (text18.getText().toString().equals("")) {
+            count18 = 0;
+        } else {
+            count18 = Integer.parseInt(text18.getText().toString());
+            editor.putInt(String.valueOf(R.string.tilt), count18);
+        }
         editor.apply();
     }
 
@@ -281,6 +295,18 @@ public class Reaktiv extends Fragment {
         }
         else {
             text16.setText("0");}
+        if (mSettings.contains(String.valueOf(R.string.kuproksat))==true)
+        {
+            text17.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.kuproksat),0)));
+        }
+        else {
+            text17.setText("0");}
+        if (mSettings.contains(String.valueOf(R.string.tilt))==true)
+        {
+            text18.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.tilt),0)));
+        }
+        else {
+            text18.setText("0");}
     }
 
 }

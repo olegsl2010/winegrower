@@ -39,19 +39,56 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:id="@+id/prep1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/textView17"
+            android:id="@+id/textView17" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/textView19"
+            android:id="@+id/textView19" />
 
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/spinnerPrep1"
             android:spinnerMode="dropdown"
-            android:entries="@array/preparats"
+            android:entries="@array/preparats1"
             android:clickable="true"
             android:layout_gravity="left" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/textView20"
+            android:id="@+id/textView20" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerPrep2"
+            android:spinnerMode="dropdown"
+            android:entries="@array/preparats2"
+            android:clickable="true"
+            android:layout_gravity="left"
+            android:focusable="false" />
     </LinearLayout>
 
     <TextView

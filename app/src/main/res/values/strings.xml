@@ -29,6 +29,8 @@
     <string name="kvadris">Квадрис</string>
     <string name="plantafol20">Плантафол 20:20:20</string>
     <string name="plantafol5">Плантафол 5:15:45</string>
+    <string name="kuproksat">Купроксат</string>
+    <string name="tilt">Тилт 250</string>
     <string name="raschetZaglavie">Варианты опрыскиваний:</string>
     <string name="backButton2">Назад</string>
     <string name="backButton3">Назад</string>
@@ -45,6 +47,9 @@
     <string name="opr8">После снятия урожая</string>
     <string name="opr9">Перед укрытием</string>
     <string name="sprayingTitle">ОПРЫСКИВАНИЕ</string>
+    <string name="textView17">Рекомендуемые Препараты :</string>
+    <string name="textView19">Препарат от Милдью</string>
+    <string name="textView20">Препарат от Оидиума</string>
 
 
 </resources>
