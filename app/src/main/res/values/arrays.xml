@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="choseSpraying" >
+        <item>@string/opr1</item>
+        <item>@string/opr2</item>
+        <item>@string/opr3</item>
+        <item>@string/opr4</item>
+        <item>@string/opr5</item>
+        <item>@string/opr6</item>
+        <item>@string/opr7</item>
+        <item>@string/opr8</item>
+        <item>@string/opr9</item>
+    </string-array>
+    <string-array name="preparats" >
+        <item></item>
+        <item>@string/horus</item>
+        <item>@string/sanmayt</item>
+        <item>@string/plantafol30</item>
+        <item>@string/ridomil</item>
+        <item>@string/topaz</item>
+        <item>@string/topsin</item>
+        <item>@string/decis</item>
+        <item>@string/vuskalKombiB</item>
+        <item>@string/maksikropZavyaz</item>
+        <item>@string/melodiduo</item>
+        <item>@string/falkon</item>
+        <item>@string/mospilan</item>
+        <item>@string/strobi</item>
+        <item>@string/kvadris</item>
+        <item>@string/plantafol20</item>
+        <item>@string/raschetZaglavie</item>
+    </string-array>
+</resources>

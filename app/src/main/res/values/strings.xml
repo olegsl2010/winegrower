@@ -35,5 +35,16 @@
     <string name="backButton5">Назад</string>
     <string name="backButton4">Назад</string>
     <string name="backButton6">Назад</string>
+    <string name="opr1">По пятому листу</string>
+    <string name="opr2">Перед цветением</string>
+    <string name="opr3">Во время цветения</string>
+    <string name="opr4">После цветения</string>
+    <string name="opr5">через 21 день 5-10июля</string>
+    <string name="opr6">25 июля - начало августа</string>
+    <string name="opr7">средина августа</string>
+    <string name="opr8">После снятия урожая</string>
+    <string name="opr9">Перед укрытием</string>
+    <string name="sprayingTitle">ОПРЫСКИВАНИЕ</string>
+
 
 </resources>

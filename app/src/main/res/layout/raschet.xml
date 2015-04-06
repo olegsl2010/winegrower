@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/adnRaschet">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -11,10 +12,46 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="@string/raschetZaglavie"
             android:id="@+id/raschetZaglavie"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            style="@style/Base.TextAppearance.AppCompat.Display1"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:touchscreenBlocksFocus="false">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerChSpraying"
+            android:spinnerMode="dropdown"
+            android:entries="@array/choseSpraying"
+            android:clickable="true"
+            android:layout_gravity="left" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/prep1">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerPrep1"
+            android:spinnerMode="dropdown"
+            android:entries="@array/preparats"
+            android:clickable="true"
+            android:layout_gravity="left" />
     </LinearLayout>
 
     <TextView
@@ -22,7 +59,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
-        android:id="@+id/textView17" />
+        android:id="@+id/textView" />
 
     <Button
         android:layout_width="wrap_content"
