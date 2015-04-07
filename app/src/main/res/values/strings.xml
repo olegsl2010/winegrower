@@ -14,23 +14,41 @@
     <string name="mixture">Необходимый состав баковой смеси</string>
     <string name="backButton1">Назад</string>
     <string name="horus">Хорус</string>
+    <string name="horusRasch">Хорус</string>
     <string name="sanmayt">Санмайт</string>
+    <string name="sanmaytRasch">Санмайт</string>
     <string name="plantafol30">Плантафол 30:10:10</string>
+    <string name="plantafol30Rasch">Плантафол 30:10:10</string>
     <string name="ridomil">Ридомил Голд</string>
+    <string name="ridomilRasch">Ридомил Голд</string>
     <string name="topaz">Топаз</string>
+    <string name="topazRasch">Топаз</string>
     <string name="topsin">Топсин</string>
+    <string name="topsinRasch">Топсин</string>
     <string name="decis">Децис</string>
+    <string name="decisRasch">Децис</string>
     <string name="vuskalKombiB">Вуксал Комби Б</string>
+    <string name="vuskalKombiBrasch">Вуксал Комби Б</string>
     <string name="maksikropZavyaz">Максикроп Завязь</string>
+    <string name="maksikropZavyazRasch">Максикроп Завязь</string>
     <string name="melodiduo">Мелоди Дуо</string>
+    <string name="melodiduoRasch">Мелоди Дуо</string>
     <string name="falkon">Фалькон</string>
+    <string name="falkonRasch">Фалькон</string>
     <string name="mospilan">Моспилан</string>
+    <string name="mospilanRasch">Моспилан</string>
     <string name="strobi">Строби</string>
+    <string name="strobiRasch">Строби</string>
     <string name="kvadris">Квадрис</string>
+    <string name="kvadrisRasch">Квадрис</string>
     <string name="plantafol20">Плантафол 20:20:20</string>
+    <string name="plantafol20Rasch">Плантафол 20:20:20</string>
     <string name="plantafol5">Плантафол 5:15:45</string>
+    <string name="plantafol5Rasch">Плантафол 5:15:45</string>
     <string name="kuproksat">Купроксат</string>
+    <string name="kuproksatRasch">Купроксат</string>
     <string name="tilt">Тилт 250</string>
+    <string name="tiltRasch">Тилт 250</string>
     <string name="raschetZaglavie">Варианты опрыскиваний:</string>
     <string name="backButton2">Назад</string>
     <string name="backButton3">Назад</string>
@@ -50,6 +68,10 @@
     <string name="textView17">Рекомендуемые Препараты :</string>
     <string name="textView19">Препарат от Милдью</string>
     <string name="textView20">Препарат от Оидиума</string>
-
-
+    <string name="textView22">Подкормка</string>
+    <string name="textView23">Инсектицид</string>
+    <string name="textView24">Для улучшения завязи</string>
+    <string name="textView25">Дополнительный препарат</string>
+    <string name="buttonRasch">Расчитать</string>
+    <string name="kollVeder">Колличество ведер :</string>
 </resources>

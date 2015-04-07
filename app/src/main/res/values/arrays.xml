@@ -16,27 +16,41 @@
         <item>@string/horus</item>
         <item>@string/ridomil</item>
         <item>@string/melodiduo</item>
-        <item>@string/falkon</item>
         <item>@string/strobi</item>
         <item>@string/kvadris</item>
         <item>@string/kuproksat</item>
     </string-array>
     <string-array name="preparats2" >
         <item></item>
-        <item>@string/horus</item>
         <item>@string/topaz</item>
         <item>@string/topsin</item>
         <item>@string/falkon</item>
         <item>@string/tilt</item>
-        <item>@string/strobi</item>
-        <item>@string/kvadris</item>
 
     </string-array>
-    <string-array name="preparats222" >
+    <string-array name="preparats3" >
+        <item></item>
+        <item>@string/plantafol30</item>
+        <item>@string/plantafol20</item>
+        <item>@string/plantafol5</item>
+    </string-array>
+    <string-array name="preparats4" >
+        <item></item>
+        <item>@string/sanmayt</item>
+        <item>@string/decis</item>
+        <item>@string/mospilan</item>
+    </string-array>
+
+    <string-array name="preparats5" >
+        <item></item>
+        <item>@string/vuskalKombiB</item>
+        <item>@string/maksikropZavyaz</item>
+    </string-array>
+
+    <string-array name="preparats6" >
         <item></item>
         <item>@string/horus</item>
         <item>@string/sanmayt</item>
-        <item>@string/plantafol30</item>
         <item>@string/ridomil</item>
         <item>@string/topaz</item>
         <item>@string/topsin</item>
@@ -48,6 +62,7 @@
         <item>@string/mospilan</item>
         <item>@string/strobi</item>
         <item>@string/kvadris</item>
+        <item>@string/plantafol30</item>
         <item>@string/plantafol20</item>
         <item>@string/plantafol5</item>
         <item>@string/kuproksat</item>

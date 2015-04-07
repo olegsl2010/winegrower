@@ -31,7 +31,7 @@ public class Reaktiv extends Fragment {
 
         mSettings = getActivity().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 
-        final SharedPreferences.Editor editor = mSettings.edit();
+//        final SharedPreferences.Editor editor = mSettings.edit();
 
         backbutt = (Button) rootView.findViewById(R.id.backButton1);
         text1 = (EditText) rootView.findViewById(R.id.editText1);
