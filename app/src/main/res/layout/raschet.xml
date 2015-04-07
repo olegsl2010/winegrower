@@ -170,28 +170,28 @@
             android:focusable="false" />
     </LinearLayout>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content" >
+        <!--<LinearLayout-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="wrap_content" >-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/textView25"
-                android:id="@+id/textView25" />
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                <!--android:text="@string/textView25"-->
+                <!--android:id="@+id/textView25" />-->
 
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinnerPrep6"
-                android:spinnerMode="dropdown"
-                android:entries="@array/preparats6"
-                android:clickable="true"
-                android:layout_gravity="left"
-                android:focusable="false" />
-        </LinearLayout>
+            <!--<Spinner-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/spinnerPrep6"-->
+                <!--android:spinnerMode="dropdown"-->
+                <!--android:entries="@array/preparats6"-->
+                <!--android:clickable="true"-->
+                <!--android:layout_gravity="left"-->
+                <!--android:focusable="false" />-->
+        <!--</LinearLayout>-->
 
         <LinearLayout
             android:orientation="horizontal"
