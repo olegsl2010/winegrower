@@ -61,7 +61,7 @@
     <string name="opr4">После цветения</string>
     <string name="opr5">через 21 день 5-10июля</string>
     <string name="opr6">25 июля - начало августа</string>
-    <string name="opr7">средина августа</string>
+    <string name="opr7">середина августа</string>
     <string name="opr8">После снятия урожая</string>
     <string name="opr9">Перед укрытием</string>
     <string name="sprayingTitle">ОПРЫСКИВАНИЕ</string>
@@ -81,7 +81,10 @@
     <string name="kvadrisAlert">Квадрис - это системный фунгицид,  защищает от : Оидиум, серая гниль, милдью. Препарат от Оидиума не нужен</string>
     <string name="poCvetuAlert">Во врямя цветения нельзя пользоватся препаратами кроме группы \"Для улучшения завязи\"</string>
     <string name="oidiumAlert">Вы не выбрали препарат для борьбы от Оидиума</string>
-    <string name="neRaschitansostav">Не Расчита состав</string>
+    <string name="neRaschitansostav">Состав не расчитан</string>
+    <string name="choose_date">Выберите дату</string>
+    <string name="ready">Готово</string>
+    <string name="tvDate1">Введите дату</string>
 
 
 </resources>

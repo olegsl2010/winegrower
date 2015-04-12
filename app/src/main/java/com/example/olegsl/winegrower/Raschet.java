@@ -281,12 +281,12 @@ public class Raschet extends Fragment{
 
         if (poss5==1)
         {
-            count17= mSettings.getInt(String.valueOf(R.string.vuskalKombiB), 0);
+            count17= mSettings.getInt(getString(R.string.vuskalKombiB), 0);
 
             if (count17>=12*count)
             {
                 countSumm17 = 12*count;
-                editor.putInt(String.valueOf(R.string.vuskalKombiBrasch), countSumm17);
+                editor.putInt(getString(R.string.vuskalKombiBrasch), countSumm17);
 
             }
             else
@@ -296,12 +296,12 @@ public class Raschet extends Fragment{
         }
         if (poss5==2)
         {
-            count18= mSettings.getInt(String.valueOf(R.string.maksikropZavyaz), 0);
+            count18= mSettings.getInt(getString(R.string.maksikropZavyaz), 0);
 
             if (count18>=50*count)
             {
                 countSumm18 = 50*count;
-                editor.putInt(String.valueOf(R.string.maksikropZavyazRasch), countSumm18);
+                editor.putInt(getString(R.string.maksikropZavyazRasch), countSumm18);
 
             }
             else
@@ -319,12 +319,12 @@ public class Raschet extends Fragment{
 
         if (poss4==1)
         {
-            count14= mSettings.getInt(String.valueOf(R.string.sanmayt), 0);
+            count14= mSettings.getInt(getString(R.string.sanmayt), 0);
 
             if (count14>=12*count)
             {
                 countSumm14 = 12*count;
-                editor.putInt(String.valueOf(R.string.sanmaytRasch), countSumm14);
+                editor.putInt(getString(R.string.sanmaytRasch), countSumm14);
 
             }
             else
@@ -334,12 +334,12 @@ public class Raschet extends Fragment{
         }
         if (poss4==2)
         {
-            count15= mSettings.getInt(String.valueOf(R.string.decis), 0);
+            count15= mSettings.getInt(getString(R.string.decis), 0);
 
             if (count15>=50*count)
             {
                 countSumm15 = 50*count;
-                editor.putInt(String.valueOf(R.string.decisRasch), countSumm15);
+                editor.putInt(getString(R.string.decisRasch), countSumm15);
 
             }
             else
@@ -349,12 +349,12 @@ public class Raschet extends Fragment{
         }
         if (poss4==3)
         {
-            count16= mSettings.getInt(String.valueOf(R.string.mospilan), 0);
+            count16= mSettings.getInt(getString(R.string.mospilan), 0);
 
             if (count16>=50*count)
             {
                 countSumm16 = 50*count;
-                editor.putInt(String.valueOf(R.string.mospilanRasch), countSumm16);
+                editor.putInt(getString(R.string.mospilanRasch), countSumm16);
 
             }
             else
@@ -371,12 +371,12 @@ public class Raschet extends Fragment{
 
         if (poss3==1)
         {
-            count11= mSettings.getInt(String.valueOf(R.string.plantafol30), 0);
+            count11= mSettings.getInt(getString(R.string.plantafol30), 0);
 
             if (count11>=12*count)
             {
                 countSumm11 = 12*count;
-                editor.putInt(String.valueOf(R.string.plantafol30Rasch), countSumm11);
+                editor.putInt(getString(R.string.plantafol30Rasch), countSumm11);
 
             }
             else
@@ -386,12 +386,12 @@ public class Raschet extends Fragment{
         }
         if (poss3==2)
         {
-            count12= mSettings.getInt(String.valueOf(R.string.plantafol20), 0);
+            count12= mSettings.getInt(getString(R.string.plantafol20), 0);
 
             if (count12>=50*count)
             {
                 countSumm12 = 50*count;
-                editor.putInt(String.valueOf(R.string.plantafol20Rasch), countSumm12);
+                editor.putInt(getString(R.string.plantafol20Rasch), countSumm12);
 
             }
             else
@@ -401,12 +401,12 @@ public class Raschet extends Fragment{
         }
         if (poss3==3)
         {
-            count13= mSettings.getInt(String.valueOf(R.string.plantafol5), 0);
+            count13= mSettings.getInt(getString(R.string.plantafol5), 0);
 
             if (count13>=50*count)
             {
                 countSumm13 = 50*count;
-                editor.putInt(String.valueOf(R.string.plantafol5Rasch), countSumm13);
+                editor.putInt(getString(R.string.plantafol5Rasch), countSumm13);
 
             }
             else
@@ -423,12 +423,12 @@ public class Raschet extends Fragment{
 
         if (poss2==1)
         {
-            count7= mSettings.getInt(String.valueOf(R.string.topaz), 0);
+            count7= mSettings.getInt(getString(R.string.topaz), 0);
 
             if (count7>=12*count)
             {
                 countSumm7 = 12*count;
-                editor.putInt(String.valueOf(R.string.topazRasch), countSumm7);
+                editor.putInt(getString(R.string.topazRasch), countSumm7);
 
             }
             else
@@ -438,12 +438,12 @@ public class Raschet extends Fragment{
         }
         if (poss2==2)
         {
-            count8= mSettings.getInt(String.valueOf(R.string.topsin), 0);
+            count8= mSettings.getInt(getString(R.string.topsin), 0);
 
             if (count8>=50*count)
             {
                 countSumm8 = 50*count;
-                editor.putInt(String.valueOf(R.string.topsinRasch), countSumm8);
+                editor.putInt(getString(R.string.topsinRasch), countSumm8);
 
             }
             else
@@ -453,12 +453,12 @@ public class Raschet extends Fragment{
         }
         if (poss2==3)
         {
-            count9= mSettings.getInt(String.valueOf(R.string.falkon), 0);
+            count9= mSettings.getInt(getString(R.string.falkon), 0);
 
             if (count9>=50*count)
             {
                 countSumm9 = 50*count;
-                editor.putInt(String.valueOf(R.string.falkonRasch), countSumm9);
+                editor.putInt(getString(R.string.falkonRasch), countSumm9);
 
             }
             else
@@ -468,12 +468,12 @@ public class Raschet extends Fragment{
         }
         if (poss2==4)
         {
-            count10= mSettings.getInt(String.valueOf(R.string.tilt), 0);
+            count10= mSettings.getInt(getString(R.string.tilt), 0);
 
             if (count10>=3*count)
             {
                 countSumm10 = 3*count;
-                editor.putInt(String.valueOf(R.string.tiltRasch), countSumm10);
+                editor.putInt(getString(R.string.tiltRasch), countSumm10);
 
             }
             else
@@ -489,12 +489,12 @@ public class Raschet extends Fragment{
 
         if (poss1==1)
         {
-            count1= mSettings.getInt(String.valueOf(R.string.horus), 0);
+            count1= mSettings.getInt(getString(R.string.horus), 0);
 
             if (count1>=12*count)
             {
                 countSumm1 = 12*count;
-                editor.putInt(String.valueOf(R.string.horusRasch), countSumm1);
+                editor.putInt(getString(R.string.horusRasch), countSumm1);
 
             }
             else
@@ -504,12 +504,12 @@ public class Raschet extends Fragment{
         }
         if (poss1==2)
         {
-            count2= mSettings.getInt(String.valueOf(R.string.ridomil), 0);
+            count2= mSettings.getInt(getString(R.string.ridomil), 0);
 
             if (count2>=50*count)
             {
                 countSumm2 = 50*count;
-                editor.putInt(String.valueOf(R.string.ridomilRasch), countSumm2);
+                editor.putInt(getString(R.string.ridomilRasch), countSumm2);
 
             }
             else
@@ -519,12 +519,12 @@ public class Raschet extends Fragment{
         }
         if (poss1==3)
         {
-            count3= mSettings.getInt(String.valueOf(R.string.melodiduo), 0);
+            count3= mSettings.getInt(getString(R.string.melodiduo), 0);
 
             if (count3>=50*count)
             {
                 countSumm3 = 50*count;
-                editor.putInt(String.valueOf(R.string.melodiduoRasch), countSumm3);
+                editor.putInt(getString(R.string.melodiduoRasch), countSumm3);
 
             }
             else
@@ -534,12 +534,12 @@ public class Raschet extends Fragment{
         }
         if (poss1==4)
         {
-            count4= mSettings.getInt(String.valueOf(R.string.strobi), 0);
+            count4= mSettings.getInt(getString(R.string.strobi), 0);
 
             if (count4>=3*count)
             {
                 countSumm4 = 3*count;
-                editor.putInt(String.valueOf(R.string.strobiRasch), countSumm4);
+                editor.putInt(getString(R.string.strobiRasch), countSumm4);
 
             }
             else
@@ -549,12 +549,12 @@ public class Raschet extends Fragment{
         }
         if (poss1==5)
         {
-            count5= mSettings.getInt(String.valueOf(R.string.kvadris), 0);
+            count5= mSettings.getInt(getString(R.string.kvadris), 0);
 
             if (count5>=6*count)
             {
                 countSumm5 = 6*count;
-                editor.putInt(String.valueOf(R.string.kvadrisRasch), countSumm5);
+                editor.putInt(getString(R.string.kvadrisRasch), countSumm5);
 
             }
             else
@@ -564,12 +564,12 @@ public class Raschet extends Fragment{
         }
         if (poss1==6)
         {
-            count6= mSettings.getInt(String.valueOf(R.string.kuproksat), 0);
+            count6= mSettings.getInt(getString(R.string.kuproksat), 0);
 
             if (count6>=100*count)
             {
                 countSumm6 = 100*count;
-                editor.putInt(String.valueOf(R.string.kuproksatRasch), countSumm6);
+                editor.putInt(getString(R.string.kuproksatRasch), countSumm6);
 
             }
             else

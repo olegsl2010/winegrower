@@ -73,7 +73,7 @@ public class Reaktiv extends Fragment {
             count1 = 0;
         } else {
             count1 = Integer.parseInt(text1.getText().toString());
-            editor.putInt(String.valueOf(R.string.horus), count1);
+            editor.putInt(getString(R.string.horus), count1);
 
         }
 
@@ -81,7 +81,7 @@ public class Reaktiv extends Fragment {
             count2 = 0;
         } else {
             count2 = Integer.parseInt(text2.getText().toString());
-            editor.putInt(String.valueOf(R.string.sanmayt), count2);
+            editor.putInt(getString(R.string.sanmayt), count2);
 
         }
 
@@ -89,221 +89,222 @@ public class Reaktiv extends Fragment {
             count3 = 0;
         } else {
             count3 = Integer.parseInt(text3.getText().toString());
-            editor.putInt(String.valueOf(R.string.plantafol30), count3);
+            editor.putInt(getString(R.string.plantafol30), count3);
         }
 
         if (text4.getText().toString().equals("")) {
             count4 = 0;
         } else {
             count4 = Integer.parseInt(text4.getText().toString());
-            editor.putInt(String.valueOf(R.string.ridomil), count4);
+            editor.putInt(getString(R.string.ridomil), count4);
         }
 
         if (text5.getText().toString().equals("")) {
             count5 = 0;
         } else {
             count5 = Integer.parseInt(text5.getText().toString());
-            editor.putInt(String.valueOf(R.string.topaz), count5);
+            editor.putInt(getString(R.string.topaz), count5);
         }
 
         if (text6.getText().toString().equals("")) {
             count6 = 0;
         } else {
             count6 = Integer.parseInt(text6.getText().toString());
-            editor.putInt(String.valueOf(R.string.topsin), count6);
+            editor.putInt(getString(R.string.topsin), count6);
         }
 
         if (text7.getText().toString().equals("")) {
             count7 = 0;
         } else {
             count7 = Integer.parseInt(text7.getText().toString());
-            editor.putInt(String.valueOf(R.string.decis), count7);
+            editor.putInt(getString(R.string.decis), count7);
         }
 
         if (text8.getText().toString().equals("")) {
             count8 = 0;
         } else {
             count8 = Integer.parseInt(text8.getText().toString());
-            editor.putInt(String.valueOf(R.string.vuskalKombiB), count8);
+            editor.putInt(getString(R.string.vuskalKombiB), count8);
         }
 
         if (text9.getText().toString().equals("")) {
             count9 = 0;
         } else {
             count9 = Integer.parseInt(text9.getText().toString());
-            editor.putInt(String.valueOf(R.string.maksikropZavyaz), count9);
+            editor.putInt(getString(R.string.maksikropZavyaz), count9);
         }
 
         if (text10.getText().toString().equals("")) {
             count10 = 0;
         } else {
             count10 = Integer.parseInt(text10.getText().toString());
-            editor.putInt(String.valueOf(R.string.melodiduo), count10);
+            editor.putInt(getString(R.string.melodiduo), count10);
         }
 
         if (text11.getText().toString().equals("")) {
             count11 = 0;
         } else {
             count11 = Integer.parseInt(text11.getText().toString());
-            editor.putInt(String.valueOf(R.string.falkon), count11);
+            editor.putInt(getString(R.string.falkon), count11);
         }
 
         if (text12.getText().toString().equals("")) {
             count12 = 0;
         } else {
             count12 = Integer.parseInt(text12.getText().toString());
-            editor.putInt(String.valueOf(R.string.mospilan), count12);
+            editor.putInt(getString(R.string.mospilan), count12);
         }
 
         if (text13.getText().toString().equals("")) {
             count13 = 0;
         } else {
             count13 = Integer.parseInt(text13.getText().toString());
-            editor.putInt(String.valueOf(R.string.strobi), count13);
+            editor.putInt(getString(R.string.strobi), count13);
         }
 
         if (text14.getText().toString().equals("")) {
             count14 = 0;
         } else {
             count14 = Integer.parseInt(text14.getText().toString());
-            editor.putInt(String.valueOf(R.string.kvadris), count14);
+            editor.putInt(getString(R.string.kvadris), count14);
         }
 
         if (text15.getText().toString().equals("")) {
             count15 = 0;
         } else {
             count15 = Integer.parseInt(text15.getText().toString());
-            editor.putInt(String.valueOf(R.string.plantafol20), count15);
+            editor.putInt(getString(R.string.plantafol20), count15);
         }
 
         if (text16.getText().toString().equals("")) {
             count16 = 0;
         } else {
             count16 = Integer.parseInt(text16.getText().toString());
-            editor.putInt(String.valueOf(R.string.plantafol5), count16);
+            editor.putInt(getString(R.string.plantafol5), count16);
         }
         if (text17.getText().toString().equals("")) {
             count17 = 0;
         } else {
             count17 = Integer.parseInt(text17.getText().toString());
-            editor.putInt(String.valueOf(R.string.kuproksat), count17);
+            editor.putInt(getString(R.string.kuproksat), count17);
         }
         if (text18.getText().toString().equals("")) {
             count18 = 0;
         } else {
             count18 = Integer.parseInt(text18.getText().toString());
-            editor.putInt(String.valueOf(R.string.tilt), count18);
+            editor.putInt(getString(R.string.tilt), count18);
         }
         editor.apply();
     }
 
 
     private void values() {
-        if (mSettings.contains(String.valueOf(R.string.horus))==true)
+        if (mSettings.contains(getString(R.string.horus))==true)
         {
-            text1.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.horus),0)));
+
+            text1.setText(String.valueOf(mSettings.getInt(getString(R.string.horus), 0)));
         }
         else {
             text1.setText("0");}
-        if (mSettings.contains(String.valueOf(R.string.sanmayt))==true)
+        if (mSettings.contains(getString(R.string.sanmayt))==true)
         {
-            text2.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.sanmayt),0)));
+            text2.setText(String.valueOf(mSettings.getInt(getString(R.string.sanmayt), 0)));
         }
         else {
             text2.setText("0");}
-        if (mSettings.contains(String.valueOf(R.string.plantafol30))==true)
+        if (mSettings.contains(getString(R.string.plantafol30))==true)
         {
-            text3.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.plantafol30),0)));
+            text3.setText(String.valueOf(mSettings.getInt(getString(R.string.plantafol30), 0)));
         }
         else {
             text3.setText("0");}
-        if (mSettings.contains(String.valueOf(R.string.ridomil))==true)
+        if (mSettings.contains(getString(R.string.ridomil))==true)
         {
-            text4.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.ridomil),0)));
+            text4.setText(String.valueOf(mSettings.getInt(getString(R.string.ridomil), 0)));
         }
         else {
             text4.setText("0");}
-        if (mSettings.contains(String.valueOf(R.string.topaz))==true)
+        if (mSettings.contains(getString(R.string.topaz))==true)
         {
-            text5.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.topaz),0)));
+            text5.setText(String.valueOf(mSettings.getInt(getString(R.string.topaz), 0)));
         }
         else {
             text5.setText("0");}
-        if (mSettings.contains(String.valueOf(R.string.topsin))==true)
+        if (mSettings.contains(getString(R.string.topsin))==true)
         {
-            text6.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.topsin),0)));
+            text6.setText(String.valueOf(mSettings.getInt(getString(R.string.topsin), 0)));
         }
         else {
             text6.setText("0");}
-        if (mSettings.contains(String.valueOf(R.string.decis))==true)
+        if (mSettings.contains(getString(R.string.decis))==true)
         {
-            text7.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.decis),0)));
+            text7.setText(String.valueOf(mSettings.getInt(getString(R.string.decis), 0)));
         }
         else {
             text7.setText("0");}
-        if (mSettings.contains(String.valueOf(R.string.vuskalKombiB))==true)
+        if (mSettings.contains(getString(R.string.vuskalKombiB))==true)
         {
-            text8.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.vuskalKombiB),0)));
+            text8.setText(String.valueOf(mSettings.getInt(getString(R.string.vuskalKombiB), 0)));
         }
         else {
             text8.setText("0");}
-        if (mSettings.contains(String.valueOf(R.string.maksikropZavyaz))==true)
+        if (mSettings.contains(getString(R.string.maksikropZavyaz))==true)
         {
-            text9.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.maksikropZavyaz),0)));
+            text9.setText(String.valueOf(mSettings.getInt(getString(R.string.maksikropZavyaz), 0)));
         }
         else {
             text9.setText("0");}
-        if (mSettings.contains(String.valueOf(R.string.melodiduo))==true)
+        if (mSettings.contains(getString(R.string.melodiduo))==true)
         {
-            text10.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.melodiduo),0)));
+            text10.setText(String.valueOf(mSettings.getInt(getString(R.string.melodiduo), 0)));
         }
         else {
             text10.setText("0");}
-        if (mSettings.contains(String.valueOf(R.string.falkon))==true)
+        if (mSettings.contains(getString(R.string.falkon))==true)
         {
-            text11.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.falkon),0)));
+            text11.setText(String.valueOf(mSettings.getInt(getString(R.string.falkon), 0)));
         }
         else {
             text11.setText("0");}
-        if (mSettings.contains(String.valueOf(R.string.mospilan))==true)
+        if (mSettings.contains(getString(R.string.mospilan))==true)
         {
-            text12.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.mospilan),0)));
+            text12.setText(String.valueOf(mSettings.getInt(getString(R.string.mospilan), 0)));
         }
         else {
             text12.setText("0");}
-        if (mSettings.contains(String.valueOf(R.string.strobi))==true)
+        if (mSettings.contains(getString(R.string.strobi))==true)
         {
-            text13.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.strobi),0)));
+            text13.setText(String.valueOf(mSettings.getInt(getString(R.string.strobi), 0)));
         }
         else {
             text13.setText("0");}
-        if (mSettings.contains(String.valueOf(R.string.kvadris))==true)
+        if (mSettings.contains(getString(R.string.kvadris))==true)
         {
-            text14.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.kvadris),0)));
+            text14.setText(String.valueOf(mSettings.getInt(getString(R.string.kvadris), 0)));
         }
         else {
             text14.setText("0");}
-        if (mSettings.contains(String.valueOf(R.string.plantafol20))==true)
+        if (mSettings.contains(getString(R.string.plantafol20))==true)
         {
-            text15.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.plantafol20),0)));
+            text15.setText(String.valueOf(mSettings.getInt(getString(R.string.plantafol20), 0)));
         }
         else {
             text15.setText("0");}
-        if (mSettings.contains(String.valueOf(R.string.plantafol5))==true)
+        if (mSettings.contains(getString(R.string.plantafol5))==true)
         {
-            text16.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.plantafol5),0)));
+            text16.setText(String.valueOf(mSettings.getInt(getString(R.string.plantafol5), 0)));
         }
         else {
             text16.setText("0");}
-        if (mSettings.contains(String.valueOf(R.string.kuproksat))==true)
+        if (mSettings.contains(getString(R.string.kuproksat))==true)
         {
-            text17.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.kuproksat),0)));
+            text17.setText(String.valueOf(mSettings.getInt(getString(R.string.kuproksat), 0)));
         }
         else {
             text17.setText("0");}
-        if (mSettings.contains(String.valueOf(R.string.tilt))==true)
+        if (mSettings.contains(getString(R.string.tilt))==true)
         {
-            text18.setText(String.valueOf(mSettings.getInt(String.valueOf(R.string.tilt),0)));
+            text18.setText(String.valueOf(mSettings.getInt(getString(R.string.tilt), 0)));
         }
         else {
             text18.setText("0");}

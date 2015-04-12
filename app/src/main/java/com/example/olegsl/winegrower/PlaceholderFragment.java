@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class PlaceholderFragment extends Fragment implements View.OnClickListener {
     View rootView;
@@ -91,7 +90,7 @@ public class PlaceholderFragment extends Fragment implements View.OnClickListene
         {
             FragmentTransaction FragManager = getFragmentManager().beginTransaction();
             FragManager.addToBackStack("");
-            FragManager.replace(R.id.container, new Celendar());
+            FragManager.replace(R.id.container, new MyCelendar());
             FragManager.commit();
         }
     }
