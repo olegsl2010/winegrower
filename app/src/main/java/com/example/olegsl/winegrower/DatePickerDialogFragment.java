@@ -4,7 +4,6 @@ import java.util.Calendar;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
-import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -44,47 +43,47 @@ public class DatePickerDialogFragment extends DialogFragment implements DatePick
     public void onDateSet(android.widget.DatePicker datePicker, int year,
                           int month, int day) {
 
-            if (MyCelendar.whatClick==1)
+            if (Celendar.whatClick==1)
             {
                 TextView tv = (TextView) getActivity().findViewById(R.id.tvDate1);
                 tv.setText(day + "-" + month + "-" + year);
             }
-        if (MyCelendar.whatClick==2)
+        if (Celendar.whatClick==2)
         {
             TextView tv = (TextView) getActivity().findViewById(R.id.tvDate2);
             tv.setText(day + "-" + month + "-" + year);
         }
-        if (MyCelendar.whatClick==3)
+        if (Celendar.whatClick==3)
         {
             TextView tv = (TextView) getActivity().findViewById(R.id.tvDate3);
             tv.setText(day + "-" + month + "-" + year);
         }
-        if (MyCelendar.whatClick==4)
+        if (Celendar.whatClick==4)
         {
             TextView tv = (TextView) getActivity().findViewById(R.id.tvDate4);
             tv.setText(day + "-" + month + "-" + year);
         }
-        if (MyCelendar.whatClick==5)
+        if (Celendar.whatClick==5)
         {
             TextView tv = (TextView) getActivity().findViewById(R.id.tvDate5);
             tv.setText(day + "-" + month + "-" + year);
         }
-        if (MyCelendar.whatClick==6)
+        if (Celendar.whatClick==6)
         {
             TextView tv = (TextView) getActivity().findViewById(R.id.tvDate6);
             tv.setText(day + "-" + month + "-" + year);
         }
-        if (MyCelendar.whatClick==7)
+        if (Celendar.whatClick==7)
         {
             TextView tv = (TextView) getActivity().findViewById(R.id.tvDate7);
             tv.setText(day + "-" + month + "-" + year);
         }
-        if (MyCelendar.whatClick==8)
+        if (Celendar.whatClick==8)
         {
             TextView tv = (TextView) getActivity().findViewById(R.id.tvDate8);
             tv.setText(day + "-" + month + "-" + year);
         }
-        if (MyCelendar.whatClick==9)
+        if (Celendar.whatClick==9)
         {
             TextView tv = (TextView) getActivity().findViewById(R.id.tvDate9);
             tv.setText(day + "-" + month + "-" + year);

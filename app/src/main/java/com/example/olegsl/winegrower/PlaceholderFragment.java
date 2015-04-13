@@ -90,7 +90,7 @@ public class PlaceholderFragment extends Fragment implements View.OnClickListene
         {
             FragmentTransaction FragManager = getFragmentManager().beginTransaction();
             FragManager.addToBackStack("");
-            FragManager.replace(R.id.container, new MyCelendar());
+            FragManager.replace(R.id.container, new Celendar());
             FragManager.commit();
         }
     }
