@@ -85,6 +85,10 @@
     <string name="choose_date">Выберите дату</string>
     <string name="ready">Готово</string>
     <string name="tvDate1">Введите дату</string>
+    <string name="alertNeedbuy">Вам необходимо докупить - </string>
+    <string name="gramm"> гр. </string>
+    <string name="milliliters"> мл. </string>
+    <string name="needBuyShow">Необходимо купить :</string>
 
 
 </resources>

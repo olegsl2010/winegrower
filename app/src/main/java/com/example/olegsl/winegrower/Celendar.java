@@ -27,7 +27,7 @@ public class Celendar extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View rootView = inflater.inflate(R.layout.myCelendar, container, false);
+        final View rootView = inflater.inflate(R.layout.mycelendar, container, false);
         backbutt = (Button) rootView.findViewById(R.id.backButton5);
         mSettings = getActivity().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 
@@ -63,7 +63,9 @@ public class Celendar extends Fragment{
         System.out.println(Raschet.getWhatRaschCreated());
 
         text=(TextView)rootView.findViewById(R.id.textView26);
-        text.setText((String.valueOf(mSettings.getInt(String.valueOf(R.string.horusRasch), 0)))+"-"+(String.valueOf(mSettings.getInt(String.valueOf(R.string.ridomilRasch), 0)))+"-"+(String.valueOf(mSettings.getInt(String.valueOf(R.string.melodiduoRasch), 0)))+"-"+(String.valueOf(mSettings.getInt(String.valueOf(R.string.strobiRasch), 0)))+"-"+(String.valueOf(mSettings.getInt(String.valueOf(R.string.kvadrisRasch), 0)))+"-"+(String.valueOf(mSettings.getInt(String.valueOf(R.string.kuproksatRasch), 0))));
+        if (Raschet.allertShow=false) {
+            text.setText((String.valueOf(mSettings.getInt(getString(R.string.horusRasch), 0))) + "-");
+        }
         return rootView;
 
     }
