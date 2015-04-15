@@ -28,9 +28,9 @@ public class Raschet extends Fragment{
     int count,count1, count2, count3, count4, count5, count6, count7, count8, count9, count10, count11, count12, count13, count14, count15, count16, count17, count18;
     int countSumm1, countSumm2, countSumm3, countSumm4, countSumm5, countSumm6, countSumm7, countSumm8, countSumm9, countSumm10, countSumm11, countSumm12, countSumm13, countSumm14, countSumm15, countSumm16, countSumm17, countSumm18;
     int poss;
-    int poss1, poss2, poss3, poss4, poss5, poss6;
+    int poss1, poss2, poss3, poss4, poss5;
     int needBuy1, needBuy2, needBuy3, needBuy4, needBuy5, needBuy6, needBuy7, needBuy8, needBuy9, needBuy10, needBuy11, needBuy12, needBuy13, needBuy14, needBuy15, needBuy16, needBuy17, needBuy18;
-
+    String preparat1, preparat2,preparat3,preparat4,preparat5;
     Spinner spinnerMain;
     Spinner spinner1;
     Spinner spinner2;
@@ -142,6 +142,7 @@ public class Raschet extends Fragment{
         allarms=false;
         count = Integer.parseInt(vedro.getText().toString());
         allarms();
+        preparat1="";preparat2="";preparat3="";preparat4="";preparat5="";
         raschetMildiu();
         raschetOidium();
         raschetUdobrenija();
@@ -347,6 +348,7 @@ public class Raschet extends Fragment{
             final SharedPreferences.Editor editor = mSettings.edit();
 
             if (poss5 == 1) {
+                preparat5=getString(R.string.vuskalKombiB);
                 count17 = mSettings.getInt(getString(R.string.vuskalKombiB), 0);
 
                 if (count17 >= 12 * count) {
@@ -359,6 +361,7 @@ public class Raschet extends Fragment{
                 }
             }
             if (poss5 == 2) {
+                preparat5=getString(R.string.maksikropZavyaz);
                 count18 = mSettings.getInt(getString(R.string.maksikropZavyaz), 0);
 
                 if (count18 >= 50 * count) {
