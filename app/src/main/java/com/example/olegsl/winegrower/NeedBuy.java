@@ -46,6 +46,7 @@ public class NeedBuy extends Fragment{
 
     private void whatCountNeedBuy() {
         String showNeeded = getString(R.string.needBuyShow)+"\n";
+        System.out.println("sdafasfasfasffaff-----"+mSettings.getInt(getString(R.string.melodiduoRasch),0));
 
         if (mSettings.getInt(getString(R.string.horusRasch),0)>0)
         {
@@ -57,6 +58,7 @@ public class NeedBuy extends Fragment{
         }
         if (mSettings.getInt(getString(R.string.melodiduoRasch),0)>0)
         {
+            System.out.println("yeeptaa"+mSettings.getInt(getString(R.string.melodiduoRasch),0));
             showNeeded+=getString(R.string.melodiduo)+" - "+mSettings.getInt(getString(R.string.melodiduoRasch),0)+getString(R.string.gramm)+"\n";
         }
         if (mSettings.getInt(getString(R.string.strobiRasch),0)>0)
@@ -119,6 +121,7 @@ public class NeedBuy extends Fragment{
         {
             showNeeded+=getString(R.string.maksikropZavyaz)+" - "+mSettings.getInt(getString(R.string.maksikropZavyazRasch),0)+getString(R.string.milliliters)+"\n";
         }
+
         text.setText(showNeeded);
 
     }

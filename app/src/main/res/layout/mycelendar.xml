@@ -50,10 +50,10 @@ android:scrollbars="none" >
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="wrap_content">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/neRaschitansostav"
@@ -213,7 +213,7 @@ android:scrollbars="none" >
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/neRaschitansostav"
-            android:id="@+id/textView40"
+            android:id="@+id/textView60"
             android:layout_gravity="top" />
     </LinearLayout>
 

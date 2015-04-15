@@ -22,8 +22,8 @@ public class Raschet extends Fragment{
     Button backbutt;
     Button button;
     EditText vedro;
-    static Boolean allertShow= false;
-    Boolean allarms=false;
+    static Boolean allertShow;
+    Boolean allarms;
     static int whatRaschCreated;
     int count,count1, count2, count3, count4, count5, count6, count7, count8, count9, count10, count11, count12, count13, count14, count15, count16, count17, count18;
     int countSumm1, countSumm2, countSumm3, countSumm4, countSumm5, countSumm6, countSumm7, countSumm8, countSumm9, countSumm10, countSumm11, countSumm12, countSumm13, countSumm14, countSumm15, countSumm16, countSumm17, countSumm18;
@@ -31,6 +31,8 @@ public class Raschet extends Fragment{
     int poss1, poss2, poss3, poss4, poss5;
     int needBuy1, needBuy2, needBuy3, needBuy4, needBuy5, needBuy6, needBuy7, needBuy8, needBuy9, needBuy10, needBuy11, needBuy12, needBuy13, needBuy14, needBuy15, needBuy16, needBuy17, needBuy18;
     String preparat1, preparat2,preparat3,preparat4,preparat5;
+    String msgToAddCelendar;
+    String msgToInform;
     Spinner spinnerMain;
     Spinner spinner1;
     Spinner spinner2;
@@ -39,6 +41,7 @@ public class Raschet extends Fragment{
     Spinner spinner5;
     Spinner spinner6;
     AlertDialog.Builder builder;
+    AlertDialog.Builder builder1;
     public static final String APP_PREFERENCES = "winegrower";
 
     //    TextView tvInfo;
@@ -49,6 +52,7 @@ public class Raschet extends Fragment{
         final View rootView = inflater.inflate(R.layout.raschet, container, false);
 
         builder = new AlertDialog.Builder(rootView.getContext());
+        builder1 = new AlertDialog.Builder(rootView.getContext());
         mSettings = getActivity().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 
 
@@ -65,16 +69,20 @@ public class Raschet extends Fragment{
         button = (Button) rootView.findViewById(R.id.buttonRasch);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
+
+                whatRaschetCreated();
                 poss = spinnerMain.getSelectedItemPosition();
                 poss1=spinner1.getSelectedItemPosition();
                 poss2=spinner2.getSelectedItemPosition();
                 poss3=spinner3.getSelectedItemPosition();
                 poss4=spinner4.getSelectedItemPosition();
                 poss5=spinner5.getSelectedItemPosition();
-//                poss6=spinner6.getSelectedItemPosition();
-//ifwrongSelected();
+//
+
                 raschetBakSmesy();
-                whatRaschetCreated();
+
+                saveToCelendar();
 
             }
         });
@@ -85,7 +93,7 @@ public class Raschet extends Fragment{
         spinner3 = (Spinner) rootView.findViewById(R.id.spinnerPrep3);
         spinner4 = (Spinner) rootView.findViewById(R.id.spinnerPrep4);
         spinner5 = (Spinner) rootView.findViewById(R.id.spinnerPrep5);
-//        spinner6 = (Spinner) rootView.findViewById(R.id.spinnerPrep6);
+
 
         spinnerMain.setSelection(2);
 
@@ -102,7 +110,7 @@ public class Raschet extends Fragment{
                 ifSelectedItem3();
                 ifSelectedItem4();
                 ifSelectedItem5();
-//                ifSelectedItem6(); считаю пока без смысла использовать
+
             }
 
             @Override
@@ -117,25 +125,240 @@ public class Raschet extends Fragment{
         return rootView;
     }
 
+    private void saveToCelendar() {
+        msgToAddCelendar="";
+        final SharedPreferences.Editor editor = mSettings.edit();
+        if (whatRaschCreated==1)
+        {
+            if (preparat1.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat1+"\n";
+            }
+            if (preparat2.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat2+"\n";
+            }
+            if (preparat3.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat3+"\n";
+            }
+            if (preparat4.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat4+"\n";
+            }
+            if (preparat5.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat5+"\n";
+            }
+            editor.putString(getString(R.string.oprSelect1),msgToAddCelendar);
+        }
+        if (whatRaschCreated==2)
+        {
+            if (preparat1.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat1+"\n";
+            }
+            if (preparat2.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat2+"\n";
+            }
+            if (preparat3.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat3+"\n";
+            }
+            if (preparat4.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat4+"\n";
+            }
+            if (preparat5.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat5+"\n";
+            }
+            editor.putString(getString(R.string.oprSelect2),msgToAddCelendar);
+        }
+        if (whatRaschCreated==3)
+        {
+            if (preparat1.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat1+"\n";
+            }
+            if (preparat2.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat2+"\n";
+            }
+            if (preparat3.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat3+"\n";
+            }
+            if (preparat4.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat4+"\n";
+            }
+            if (preparat5.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat5+"\n";
+            }
+            editor.putString(getString(R.string.oprSelect3),msgToAddCelendar);
+        }
+        if (whatRaschCreated==4)
+        {
+            if (preparat1.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat1+"\n";
+            }
+            if (preparat2.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat2+"\n";
+            }
+            if (preparat3.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat3+"\n";
+            }
+            if (preparat4.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat4+"\n";
+            }
+            if (preparat5.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat5+"\n";
+            }
+            editor.putString(getString(R.string.oprSelect4),msgToAddCelendar);
+        }
+        if (whatRaschCreated==5)
+        {
+            if (preparat1.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat1+"\n";
+            }
+            if (preparat2.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat2+"\n";
+            }
+            if (preparat3.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat3+"\n";
+            }
+            if (preparat4.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat4+"\n";
+            }
+            if (preparat5.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat5+"\n";
+            }
+            editor.putString(getString(R.string.oprSelect5),msgToAddCelendar);
+        }
+        if (whatRaschCreated==6)
+        {
+            if (preparat1.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat1+"\n";
+            }
+            if (preparat2.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat2+"\n";
+            }
+            if (preparat3.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat3+"\n";
+            }
+            if (preparat4.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat4+"\n";
+            }
+            if (preparat5.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat5+"\n";
+            }
+            editor.putString(getString(R.string.oprSelect6),msgToAddCelendar);
+        }
+        if (whatRaschCreated==7)
+        {
+            if (preparat1.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat1+"\n";
+            }
+            if (preparat2.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat2+"\n";
+            }
+            if (preparat3.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat3+"\n";
+            }
+            if (preparat4.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat4+"\n";
+            }
+            if (preparat5.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat5+"\n";
+            }
+            editor.putString(getString(R.string.oprSelect7),msgToAddCelendar);
+        }
+        if (whatRaschCreated==8)
+        {
+            if (preparat1.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat1+"\n";
+            }
+            if (preparat2.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat2+"\n";
+            }
+            if (preparat3.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat3+"\n";
+            }
+            if (preparat4.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat4+"\n";
+            }
+            if (preparat5.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat5+"\n";
+            }
+            editor.putString(getString(R.string.oprSelect8),msgToAddCelendar);
+        }
+        if (whatRaschCreated==9)
+        {
+            if (preparat1.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat1+"\n";
+            }
+            if (preparat2.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat2+"\n";
+            }
+            if (preparat3.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat3+"\n";
+            }
+            if (preparat4.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat4+"\n";
+            }
+            if (preparat5.equals("")!=true)
+            {
+                msgToAddCelendar+=preparat5+"\n";
+            }
+            editor.putString(getString(R.string.oprSelect9),msgToAddCelendar);
+        }
+        editor.apply();
+    }
+
     private void whatRaschetCreated() {
-        for (int i = 0;i<=8;i++)
+        whatRaschCreated=0;
+        for (int i = 0;i<=9;i++)
         {
             if(spinnerMain.getSelectedItemPosition()==i)
             {
-                whatRaschCreated=i;
+                whatRaschCreated=i+1;
             }
         }
     }
 
-//    private void ifwrongSelected() {
-//        if (poss==0)
-//        {
-//            if (poss1==0)
-//            {
-//
-//            }
-//        }
-//    }
+
 
     private void raschetBakSmesy() {
         allertShow= false;
@@ -143,15 +366,124 @@ public class Raschet extends Fragment{
         count = Integer.parseInt(vedro.getText().toString());
         allarms();
         preparat1="";preparat2="";preparat3="";preparat4="";preparat5="";
-        raschetMildiu();
-        raschetOidium();
-        raschetUdobrenija();
-        raschetInsekticid();
-        raschetZavyaz();
-        if (allarms!=true) {
-            showAlertCount();
+        if (allarms != true) {
+            raschetMildiu();
+            raschetOidium();
+            raschetUdobrenija();
+            raschetInsekticid();
+            raschetZavyaz();
+            msgToIformAlert();
+
+            builder1.setTitle(R.string.allarmTitle)
+                    .setCancelable(false)
+                    .setPositiveButton(R.string.positiveButton,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    if (allarms != true) {
+                                        showAlertCount();
+                                        toSPRaschetnoe();
+                                    }
+                                    dialog.cancel();
+                                }
+                            })
+                    .setNegativeButton(R.string.cancelButton,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+
+                                }
+                            });
+            builder1.setMessage(msgToInform);
+            AlertDialog alert = builder1.create();
+            alert.show();
         }
 
+    }
+
+        private void msgToIformAlert() {
+            msgToInform=getString(R.string.msgToInform);
+            if (preparat1.equals("")!=true)
+            {
+                msgToInform+=preparat1+"\n";
+            }
+            if (preparat2.equals("")!=true)
+            {
+                msgToInform+=preparat2+"\n";
+            }
+            if (preparat3.equals("")!=true)
+            {
+                msgToInform+=preparat3+"\n";
+            }
+            if (preparat4.equals("")!=true)
+            {
+                msgToInform+=preparat4+"\n";
+            }
+            if (preparat5.equals("")!=true)
+            {
+                msgToInform+=preparat5+"\n";
+            }
+
+
+    }
+
+    private void toSPRaschetnoe()
+    {
+            final SharedPreferences.Editor editor = mSettings.edit();
+            if (needBuy1 > 0) {
+                editor.putInt(getString(R.string.horusRasch), needBuy1);
+            }
+            if (needBuy2 > 0) {
+                editor.putInt(getString(R.string.ridomilRasch), needBuy2);
+            }
+            if (needBuy3 > 0) {
+                editor.putInt(getString(R.string.melodiduoRasch), needBuy3);
+            }
+            if (needBuy4 > 0) {
+                editor.putInt(getString(R.string.strobiRasch), needBuy4);
+            }
+            if (needBuy5 > 0) {
+                editor.putInt(getString(R.string.kvadrisRasch), needBuy5);
+            }
+            if (needBuy6 > 0) {
+                editor.putInt(getString(R.string.kuproksatRasch), needBuy6);
+            }
+            if (needBuy7 > 0) {
+                editor.putInt(getString(R.string.topazRasch), needBuy7);
+            }
+            if (needBuy8 > 0) {
+                editor.putInt(getString(R.string.topsinRasch), needBuy8);
+            }
+            if (needBuy9 > 0) {
+                editor.putInt(getString(R.string.falkonRasch), needBuy9);
+            }
+            if (needBuy10 > 0) {
+                editor.putInt(getString(R.string.tiltRasch), needBuy10);
+            }
+            if (needBuy11 > 0) {
+                editor.putInt(getString(R.string.plantafol30Rasch), needBuy11);
+            }
+            if (needBuy12 > 0) {
+                editor.putInt(getString(R.string.plantafol20Rasch), needBuy12);
+            }
+            if (needBuy13 > 0) {
+                editor.putInt(getString(R.string.plantafol5Rasch), needBuy13);
+            }
+            if (needBuy14 > 0) {
+                editor.putInt(getString(R.string.sanmaytRasch), needBuy14);
+            }
+            if (needBuy15 > 0) {
+                editor.putInt(getString(R.string.decisRasch), needBuy15);
+            }
+            if (needBuy16 > 0) {
+                editor.putInt(getString(R.string.mospilanRasch), needBuy16);
+            }
+            if (needBuy17 > 0) {
+                editor.putInt(getString(R.string.vuskalKombiBrasch), needBuy17);
+            }
+            if (needBuy18 > 0) {
+                editor.putInt(getString(R.string.maksikropZavyazRasch), needBuy18);
+            }
+            editor.apply();
     }
 
     private void showAlertCount() {
@@ -343,9 +675,9 @@ public class Raschet extends Fragment{
     }
 
     private void raschetZavyaz() {
-        if (allarms != true) {
+
             needBuy17=0;needBuy18=0;
-            final SharedPreferences.Editor editor = mSettings.edit();
+
 
             if (poss5 == 1) {
                 preparat5=getString(R.string.vuskalKombiB);
@@ -353,7 +685,7 @@ public class Raschet extends Fragment{
 
                 if (count17 >= 12 * count) {
                     countSumm17 = 12 * count;
-                    editor.putInt(getString(R.string.vuskalKombiBrasch), countSumm17);
+
 
                 } else {
                     needBuy17 = 12 * count - count17;
@@ -366,30 +698,26 @@ public class Raschet extends Fragment{
 
                 if (count18 >= 50 * count) {
                     countSumm18 = 50 * count;
-                    editor.putInt(getString(R.string.maksikropZavyazRasch), countSumm18);
+
 
                 } else {
                     needBuy18 = 50 * count - count18;
-
                 }
             }
-
-            editor.apply();
-
-        }
     }
 
     private void raschetInsekticid() {
-        if (allarms != true) {
+
             needBuy14=0;needBuy15=0;needBuy16=0;
-            final SharedPreferences.Editor editor = mSettings.edit();
+
 
             if (poss4 == 1) {
+                preparat4=getString(R.string.sanmayt);
                 count14 = mSettings.getInt(getString(R.string.sanmayt), 0);
 
                 if (count14 >= 12 * count) {
                     countSumm14 = 12 * count;
-                    editor.putInt(getString(R.string.sanmaytRasch), countSumm14);
+
 
                 } else {
                     needBuy14 = 12 * count - count14;
@@ -397,11 +725,12 @@ public class Raschet extends Fragment{
                 }
             }
             if (poss4 == 2) {
+                preparat4=getString(R.string.decis);
                 count15 = mSettings.getInt(getString(R.string.decis), 0);
 
                 if (count15 >= 50 * count) {
                     countSumm15 = 50 * count;
-                    editor.putInt(getString(R.string.decisRasch), countSumm15);
+
 
                 } else {
                     needBuy15 = 50 * count - count15;
@@ -409,11 +738,12 @@ public class Raschet extends Fragment{
                 }
             }
             if (poss4 == 3) {
+                preparat4=getString(R.string.mospilan);
                 count16 = mSettings.getInt(getString(R.string.mospilan), 0);
 
                 if (count16 >= 50 * count) {
                     countSumm16 = 50 * count;
-                    editor.putInt(getString(R.string.mospilanRasch), countSumm16);
+
 
                 } else {
                     needBuy16 = 50 * count - count16;
@@ -421,21 +751,20 @@ public class Raschet extends Fragment{
                 }
             }
 
-            editor.apply();
         }
-    }
+
 
     private void raschetUdobrenija() {
-        if (allarms != true) {
+
             needBuy11=0;needBuy12=0;needBuy13=0;
-            final SharedPreferences.Editor editor = mSettings.edit();
 
             if (poss3 == 1) {
+                preparat3=getString(R.string.plantafol30);
                 count11 = mSettings.getInt(getString(R.string.plantafol30), 0);
 
                 if (count11 >= 12 * count) {
                     countSumm11 = 12 * count;
-                    editor.putInt(getString(R.string.plantafol30Rasch), countSumm11);
+
 
                 } else {
                     needBuy11 = 12 * count - count11;
@@ -443,11 +772,12 @@ public class Raschet extends Fragment{
                 }
             }
             if (poss3 == 2) {
+                preparat3=getString(R.string.plantafol20);
                 count12 = mSettings.getInt(getString(R.string.plantafol20), 0);
 
                 if (count12 >= 50 * count) {
                     countSumm12 = 50 * count;
-                    editor.putInt(getString(R.string.plantafol20Rasch), countSumm12);
+
 
                 } else {
                     needBuy12 = 50 * count - count12;
@@ -455,33 +785,33 @@ public class Raschet extends Fragment{
                 }
             }
             if (poss3 == 3) {
+                preparat3=getString(R.string.plantafol5);
                 count13 = mSettings.getInt(getString(R.string.plantafol5), 0);
 
                 if (count13 >= 50 * count) {
                     countSumm13 = 50 * count;
-                    editor.putInt(getString(R.string.plantafol5Rasch), countSumm13);
+
 
                 } else {
                     needBuy13 = 50 * count - count13;
 
                 }
             }
-
-            editor.apply();
         }
-    }
+
 
     private void raschetOidium() {
-        if (allarms != true) {
+
             needBuy7=0;needBuy8=0;needBuy9=0;needBuy10=0;
-            final SharedPreferences.Editor editor = mSettings.edit();
+
 
             if (poss2 == 1) {
+                preparat2=getString(R.string.topaz);
                 count7 = mSettings.getInt(getString(R.string.topaz), 0);
 
                 if (count7 >= 12 * count) {
                     countSumm7 = 12 * count;
-                    editor.putInt(getString(R.string.topazRasch), countSumm7);
+
 
                 } else {
                     needBuy7 = 12 * count - count7;
@@ -489,11 +819,12 @@ public class Raschet extends Fragment{
                 }
             }
             if (poss2 == 2) {
+                preparat2=getString(R.string.topsin);
                 count8 = mSettings.getInt(getString(R.string.topsin), 0);
 
                 if (count8 >= 50 * count) {
                     countSumm8 = 50 * count;
-                    editor.putInt(getString(R.string.topsinRasch), countSumm8);
+
 
                 } else {
                     needBuy8 = 50 * count - count8;
@@ -501,11 +832,12 @@ public class Raschet extends Fragment{
                 }
             }
             if (poss2 == 3) {
+                preparat2=getString(R.string.falkon);
                 count9 = mSettings.getInt(getString(R.string.falkon), 0);
 
                 if (count9 >= 50 * count) {
                     countSumm9 = 50 * count;
-                    editor.putInt(getString(R.string.falkonRasch), countSumm9);
+
 
                 } else {
                     needBuy9 = 50 * count - count9;
@@ -513,81 +845,84 @@ public class Raschet extends Fragment{
                 }
             }
             if (poss2 == 4) {
+                preparat2=getString(R.string.tilt);
                 count10 = mSettings.getInt(getString(R.string.tilt), 0);
 
                 if (count10 >= 3 * count) {
                     countSumm10 = 3 * count;
-                    editor.putInt(getString(R.string.tiltRasch), countSumm10);
+
 
                 } else {
                     needBuy10 = 3 * count - count10;
 
                 }
             }
-            editor.apply();
+
         }
-    }
+
 
     private void raschetMildiu() {
-        if (allarms != true) {
-            needBuy1=0;needBuy2=0;needBuy3=0;needBuy4=0;needBuy5=0;needBuy6=0;
-            final SharedPreferences.Editor editor = mSettings.edit();
 
-            if (poss1 == 1) {
-                count1 = mSettings.getInt(getString(R.string.horus), 0);
+        needBuy1 = 0;
+        needBuy2 = 0;
+        needBuy3 = 0;
+        needBuy4 = 0;
+        needBuy5 = 0;
+        needBuy6 = 0;
 
+        if (poss1 == 1) {
+            preparat1 = getString(R.string.horus);
+            count1 = mSettings.getInt(getString(R.string.horus), 0);
+            if (count1 >= 12 * count) {
+                countSumm1 = 12 * count;
+            } else {
+                needBuy1 = 12 * count - count1;
 
-                if (count1 >= 12 * count) {
-                    countSumm1 = 12 * count;
-                    editor.putInt(getString(R.string.horusRasch), countSumm1);
-
-                } else {
-                    needBuy1 = 12 * count - count1;
-
-                }
             }
-            if (poss1 == 2) {
-                count2 = mSettings.getInt(getString(R.string.ridomil), 0);
+        }
+        if (poss1 == 2) {
+            preparat1 = getString(R.string.ridomil);
+            count2 = mSettings.getInt(getString(R.string.ridomil), 0);
+            if (count2 >= 50 * count) {
+                countSumm2 = 50 * count;
 
-                if (count2 >= 50 * count) {
-                    countSumm2 = 50 * count;
-                    editor.putInt(getString(R.string.ridomilRasch), countSumm2);
 
-                } else {
-                    needBuy2 = 50 * count - count2;
+            } else {
+                needBuy2 = 50 * count - count2;
 
-                }
             }
-            if (poss1 == 3) {
-                count3 = mSettings.getInt(getString(R.string.melodiduo), 0);
+        }
+        if (poss1 == 3) {
+            preparat1 = getString(R.string.melodiduo);
+            count3 = mSettings.getInt(getString(R.string.melodiduo), 0);
 
-                if (count3 >= 50 * count) {
-                    countSumm3 = 50 * count;
-                    editor.putInt(getString(R.string.melodiduoRasch), countSumm3);
+            if (count3 >= 50 * count) {
+                countSumm3 = 50 * count;
 
-                } else {
-                    needBuy3 = 50 * count - count3;
+            } else {
+                needBuy3 = 50 * count - count3;
 
-                }
             }
-            if (poss1 == 4) {
-                count4 = mSettings.getInt(getString(R.string.strobi), 0);
+        }
+        if (poss1 == 4) {
+            preparat1 = getString(R.string.strobi);
+            count4 = mSettings.getInt(getString(R.string.strobi), 0);
 
-                if (count4 >= 3 * count) {
-                    countSumm4 = 3 * count;
-                    editor.putInt(getString(R.string.strobiRasch), countSumm4);
+            if (count4 >= 3 * count) {
+                countSumm4 = 3 * count;
 
-                } else {
-                    needBuy4 = 3 * count - count4;
 
-                }
+            } else {
+                needBuy4 = 3 * count - count4;
+
             }
             if (poss1 == 5) {
+                preparat1 = getString(R.string.kvadris);
                 count5 = mSettings.getInt(getString(R.string.kvadris), 0);
 
                 if (count5 >= 6 * count) {
                     countSumm5 = 6 * count;
-                    editor.putInt(getString(R.string.kvadrisRasch), countSumm5);
+
 
                 } else {
                     needBuy5 = 6 * count - count5;
@@ -595,19 +930,22 @@ public class Raschet extends Fragment{
                 }
             }
             if (poss1 == 6) {
+                preparat1 = getString(R.string.kuproksat);
                 count6 = mSettings.getInt(getString(R.string.kuproksat), 0);
 
                 if (count6 >= 100 * count) {
                     countSumm6 = 100 * count;
-                    editor.putInt(getString(R.string.kuproksatRasch), countSumm6);
+
 
                 } else {
                     needBuy6 = 100 * count - count6;
 
                 }
             }
-            editor.apply();
+
         }
+
+
     }
 
 

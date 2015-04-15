@@ -17,6 +17,7 @@ public class Celendar extends Fragment{
     Button backbutt;
     TextView text;
     TextView date1, date2, date3, date4, date5, date6, date7, date8, date9 ;
+    TextView composition1,composition2,composition3,composition4,composition5,composition6,composition7,composition8,composition9;
     public static final String APP_PREFERENCES = "winegrower";
     SharedPreferences mSettings;
     public static int whatClick;
@@ -27,7 +28,7 @@ public class Celendar extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View rootView = inflater.inflate(R.layout.mycelendar, container, false);
+        final View rootView = inflater.inflate(R.layout.myCelendar, container, false);
         backbutt = (Button) rootView.findViewById(R.id.backButton5);
         mSettings = getActivity().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 
@@ -41,6 +42,17 @@ public class Celendar extends Fragment{
         date8 = (TextView) rootView.findViewById(R.id.tvDate8);
         date9 = (TextView) rootView.findViewById(R.id.tvDate9);
 
+        composition1 = (TextView) rootView.findViewById(R.id.textView29);
+        composition2 = (TextView) rootView.findViewById(R.id.textView31);
+        composition3 = (TextView) rootView.findViewById(R.id.textView34);
+        composition4 = (TextView) rootView.findViewById(R.id.textView37);
+        composition5 = (TextView) rootView.findViewById(R.id.textView60);
+        composition6 = (TextView) rootView.findViewById(R.id.textView43);
+        composition7 = (TextView) rootView.findViewById(R.id.textView46);
+        composition8 = (TextView) rootView.findViewById(R.id.textView49);
+        composition9 = (TextView) rootView.findViewById(R.id.textView52);
+
+
         date1.setOnClickListener(dateClick1);
         date2.setOnClickListener(dateClick1);
         date3.setOnClickListener(dateClick1);
@@ -51,6 +63,7 @@ public class Celendar extends Fragment{
         date8.setOnClickListener(dateClick1);
         date9.setOnClickListener(dateClick1);
         selectedDates();
+        addComposition();
 
         backbutt.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -67,6 +80,46 @@ public class Celendar extends Fragment{
             text.setText((String.valueOf(mSettings.getInt(getString(R.string.horusRasch), 0))) + "-");
         }
         return rootView;
+
+    }
+
+    private void addComposition() {
+        if(mSettings.contains(getString(R.string.oprSelect1))==true)
+        {
+            composition1.setText(mSettings.getString(getString(R.string.oprSelect1),"0"));
+        }
+        if(mSettings.contains(getString(R.string.oprSelect2))==true)
+        {
+            composition2.setText(mSettings.getString(getString(R.string.oprSelect2),"0"));
+        }
+        if(mSettings.contains(getString(R.string.oprSelect3))==true)
+        {
+            composition3.setText(mSettings.getString(getString(R.string.oprSelect3),"0"));
+        }
+        if(mSettings.contains(getString(R.string.oprSelect4))==true)
+        {
+            composition4.setText(mSettings.getString(getString(R.string.oprSelect4),"0"));
+        }
+        if(mSettings.contains(getString(R.string.oprSelect5))==true)
+        {
+            composition5.setText(mSettings.getString(getString(R.string.oprSelect5),"0"));
+        }
+        if(mSettings.contains(getString(R.string.oprSelect6))==true)
+        {
+            composition6.setText(mSettings.getString(getString(R.string.oprSelect6),"0"));
+        }
+        if(mSettings.contains(getString(R.string.oprSelect7))==true)
+        {
+            composition7.setText(mSettings.getString(getString(R.string.oprSelect7),"0"));
+        }
+        if(mSettings.contains(getString(R.string.oprSelect8))==true)
+        {
+            composition8.setText(mSettings.getString(getString(R.string.oprSelect8),"0"));
+        }
+        if(mSettings.contains(getString(R.string.oprSelect9))==true)
+        {
+            composition9.setText(mSettings.getString(getString(R.string.oprSelect9),"0"));
+        }
 
     }
 

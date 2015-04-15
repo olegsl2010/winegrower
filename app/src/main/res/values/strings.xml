@@ -56,14 +56,23 @@
     <string name="backButton4">Назад</string>
     <string name="backButton6">Назад</string>
     <string name="opr1">По пятому листу</string>
+    <string name="oprSelect1">Расчитанная -По пятому листу</string>
     <string name="opr2">Перед цветением</string>
+    <string name="oprSelect2">Расчитанная -Перед цветением</string>
     <string name="opr3">Во время цветения</string>
+    <string name="oprSelect3">Расчитанная -Во время цветения</string>
     <string name="opr4">После цветения</string>
+    <string name="oprSelect4">Расчитанная -После цветения</string>
     <string name="opr5">через 21 день 5-10июля</string>
+    <string name="oprSelect5">Расчитанная -через 21 день 5-10июля</string>
     <string name="opr6">25 июля - начало августа</string>
+    <string name="oprSelect6">Расчитанная -25 июля - начало августа</string>
     <string name="opr7">середина августа</string>
+    <string name="oprSelect7">Расчитанная -середина августа</string>
     <string name="opr8">После снятия урожая</string>
+    <string name="oprSelect8">Расчитанная -После снятия урожая</string>
     <string name="opr9">Перед укрытием</string>
+    <string name="oprSelect9">Расчитанная -Перед укрытием</string>
     <string name="sprayingTitle">ОПРЫСКИВАНИЕ</string>
     <string name="textView17">Рекомендуемые Препараты :</string>
     <string name="textView19">Препарат от Милдью</string>
@@ -89,6 +98,9 @@
     <string name="gramm"> гр. </string>
     <string name="milliliters"> мл. </string>
     <string name="needBuyShow">Необходимо купить :</string>
+    <string name="cancelButton">Не расчитывать</string>
+    <string name="positiveButton">Расчитать</string>
+    <string name="msgToInform">Вам необходимо : \n</string>
 
 
 </resources>
