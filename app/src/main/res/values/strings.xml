@@ -98,8 +98,8 @@
     <string name="gramm"> гр. </string>
     <string name="milliliters"> мл. </string>
     <string name="needBuyShow">Необходимо купить :</string>
-    <string name="cancelButton">Не расчитывать</string>
-    <string name="positiveButton">Расчитать</string>
+    <string name="cancelButton">Не добавлять</string>
+    <string name="positiveButton">Добывить в Календарь</string>
     <string name="msgToInform">Вам необходимо : \n</string>
 
 

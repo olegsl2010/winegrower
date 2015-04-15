@@ -28,7 +28,7 @@ public class Celendar extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View rootView = inflater.inflate(R.layout.myCelendar, container, false);
+        final View rootView = inflater.inflate(R.layout.mycelendar, container, false);
         backbutt = (Button) rootView.findViewById(R.id.backButton5);
         mSettings = getActivity().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 

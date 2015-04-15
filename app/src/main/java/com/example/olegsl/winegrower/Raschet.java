@@ -27,6 +27,7 @@ public class Raschet extends Fragment{
     static int whatRaschCreated;
     int count,count1, count2, count3, count4, count5, count6, count7, count8, count9, count10, count11, count12, count13, count14, count15, count16, count17, count18;
     int countSumm1, countSumm2, countSumm3, countSumm4, countSumm5, countSumm6, countSumm7, countSumm8, countSumm9, countSumm10, countSumm11, countSumm12, countSumm13, countSumm14, countSumm15, countSumm16, countSumm17, countSumm18;
+    int delFromRaschet1, delFromRaschet2, delFromRaschet3, delFromRaschet4, delFromRaschet5, delFromRaschet6, delFromRaschet7, delFromRaschet8, delFromRaschet9, delFromRaschet10, delFromRaschet11, delFromRaschet12, delFromRaschet13, delFromRaschet14, delFromRaschet15, delFromRaschet16, delFromRaschet17, delFromRaschet18;
     int poss;
     int poss1, poss2, poss3, poss4, poss5;
     int needBuy1, needBuy2, needBuy3, needBuy4, needBuy5, needBuy6, needBuy7, needBuy8, needBuy9, needBuy10, needBuy11, needBuy12, needBuy13, needBuy14, needBuy15, needBuy16, needBuy17, needBuy18;
@@ -382,6 +383,7 @@ public class Raschet extends Fragment{
                                     if (allarms != true) {
                                         showAlertCount();
                                         toSPRaschetnoe();
+                                        deleteFromReactiv();
                                     }
                                     dialog.cancel();
                                 }
@@ -400,90 +402,328 @@ public class Raschet extends Fragment{
 
     }
 
-        private void msgToIformAlert() {
-            msgToInform=getString(R.string.msgToInform);
-            if (preparat1.equals("")!=true)
+    private void deleteFromReactiv() {
+        delFromRaschet1=0; delFromRaschet2=0; delFromRaschet3=0; delFromRaschet4=0; delFromRaschet5=0; delFromRaschet6=0; delFromRaschet7=0; delFromRaschet8=0; delFromRaschet9=0; delFromRaschet10=0; delFromRaschet11=0; delFromRaschet12=0; delFromRaschet13=0; delFromRaschet14=0; delFromRaschet15=0; delFromRaschet16=0; delFromRaschet17=0; delFromRaschet18=0;
+        final SharedPreferences.Editor editor = mSettings.edit();
+        if(countSumm1>0)
+        {
+           if(countSumm1<=mSettings.getInt(getString(R.string.horus), 0))
+           {
+               delFromRaschet1= mSettings.getInt(getString(R.string.horus), 0) - countSumm1;
+              editor.putInt(getString(R.string.horus),delFromRaschet1);
+           }else{
+               editor.putInt(getString(R.string.horus),delFromRaschet1);
+           }
+        }
+        if(countSumm2>0)
+        {
+            if(countSumm2<=mSettings.getInt(getString(R.string.ridomil), 0))
             {
-                msgToInform+=preparat1+"\n";
+                delFromRaschet2= mSettings.getInt(getString(R.string.ridomil), 0) - countSumm2;
+                editor.putInt(getString(R.string.ridomil),delFromRaschet2);
+            }else{
+                editor.putInt(getString(R.string.ridomil),delFromRaschet2);
             }
-            if (preparat2.equals("")!=true)
+        }
+        if(countSumm3>0)
+        {
+            if(countSumm3<=mSettings.getInt(getString(R.string.melodiduo), 0))
             {
-                msgToInform+=preparat2+"\n";
+                delFromRaschet3= mSettings.getInt(getString(R.string.melodiduo), 0) - countSumm3;
+                editor.putInt(getString(R.string.melodiduo),delFromRaschet3);
+            }else{
+                editor.putInt(getString(R.string.melodiduo),delFromRaschet3);
             }
-            if (preparat3.equals("")!=true)
+        }
+        if(countSumm4>0)
+        {
+            if(countSumm4<=mSettings.getInt(getString(R.string.strobi), 0))
             {
-                msgToInform+=preparat3+"\n";
+                delFromRaschet4= mSettings.getInt(getString(R.string.strobi), 0) - countSumm4;
+                editor.putInt(getString(R.string.strobi),delFromRaschet4);
+            }else{
+                editor.putInt(getString(R.string.strobi),delFromRaschet4);
             }
-            if (preparat4.equals("")!=true)
+        }
+        if(countSumm5>0)
+        {
+            if(countSumm5<=mSettings.getInt(getString(R.string.kvadris), 0))
             {
-                msgToInform+=preparat4+"\n";
+                delFromRaschet5= mSettings.getInt(getString(R.string.kvadris), 0) - countSumm5;
+                editor.putInt(getString(R.string.kvadris),delFromRaschet5);
+            }else{
+                editor.putInt(getString(R.string.kvadris),delFromRaschet5);
             }
-            if (preparat5.equals("")!=true)
+        }
+        if(countSumm6>0)
+        {
+            if(countSumm6<=mSettings.getInt(getString(R.string.kuproksat), 0))
             {
-                msgToInform+=preparat5+"\n";
+                delFromRaschet6= mSettings.getInt(getString(R.string.kuproksat), 0) - countSumm6;
+                editor.putInt(getString(R.string.kuproksat),delFromRaschet6);
+            }else{
+                editor.putInt(getString(R.string.kuproksat),delFromRaschet6);
             }
-
+        }
+        if(countSumm7>0)
+        {
+            if(countSumm7<=mSettings.getInt(getString(R.string.topaz), 0))
+            {
+                delFromRaschet7= mSettings.getInt(getString(R.string.topaz), 0) - countSumm7;
+                editor.putInt(getString(R.string.topaz),delFromRaschet7);
+            }else{
+                editor.putInt(getString(R.string.topaz),delFromRaschet7);
+            }
+        }
+        if(countSumm8>0)
+        {
+            if(countSumm8<=mSettings.getInt(getString(R.string.topsin), 0))
+            {
+                delFromRaschet8= mSettings.getInt(getString(R.string.topsin), 0) - countSumm8;
+                editor.putInt(getString(R.string.topsin),delFromRaschet8);
+            }else{
+                editor.putInt(getString(R.string.topsin),delFromRaschet8);
+            }
+        }
+        if(countSumm9>0)
+        {
+            if(countSumm9<=mSettings.getInt(getString(R.string.falkon), 0))
+            {
+                delFromRaschet9= mSettings.getInt(getString(R.string.falkon), 0) - countSumm9;
+                editor.putInt(getString(R.string.falkon),delFromRaschet9);
+            }else{
+                editor.putInt(getString(R.string.falkon),delFromRaschet9);
+            }
+        }
+        if(countSumm10>0)
+        {
+            if(countSumm10<=mSettings.getInt(getString(R.string.tilt), 0))
+            {
+                delFromRaschet10= mSettings.getInt(getString(R.string.tilt), 0) - countSumm10;
+                editor.putInt(getString(R.string.tilt),delFromRaschet10);
+            }else{
+                editor.putInt(getString(R.string.tilt),delFromRaschet10);
+            }
+        }
+        if(countSumm11>0)
+        {
+            if(countSumm11<=mSettings.getInt(getString(R.string.plantafol30), 0))
+            {
+                delFromRaschet11= mSettings.getInt(getString(R.string.plantafol30), 0) - countSumm11;
+                editor.putInt(getString(R.string.plantafol30),delFromRaschet11);
+            }else{
+                editor.putInt(getString(R.string.plantafol30),delFromRaschet11);
+            }
+        }
+        if(countSumm12>0)
+        {
+            if(countSumm12<=mSettings.getInt(getString(R.string.plantafol20), 0))
+            {
+                delFromRaschet12= mSettings.getInt(getString(R.string.plantafol20), 0) - countSumm12;
+                editor.putInt(getString(R.string.plantafol20),delFromRaschet12);
+            }else{
+                editor.putInt(getString(R.string.plantafol20),delFromRaschet12);
+            }
+        }
+        if(countSumm13>0)
+        {
+            if(countSumm13<=mSettings.getInt(getString(R.string.plantafol5), 0))
+            {
+                delFromRaschet13= mSettings.getInt(getString(R.string.plantafol5), 0) - countSumm13;
+                editor.putInt(getString(R.string.plantafol5),delFromRaschet13);
+            }else{
+                editor.putInt(getString(R.string.plantafol5),delFromRaschet13);
+            }
+        }
+        if(countSumm14>0)
+        {
+            if(countSumm14<=mSettings.getInt(getString(R.string.sanmayt), 0))
+            {
+                delFromRaschet14= mSettings.getInt(getString(R.string.sanmayt), 0) - countSumm14;
+                editor.putInt(getString(R.string.sanmayt),delFromRaschet14);
+            }else{
+                editor.putInt(getString(R.string.sanmayt),delFromRaschet14);
+            }
+        }
+        if(countSumm15>0)
+        {
+            if(countSumm15<=mSettings.getInt(getString(R.string.decis), 0))
+            {
+                delFromRaschet15= mSettings.getInt(getString(R.string.decis), 0) - countSumm15;
+                editor.putInt(getString(R.string.decis),delFromRaschet15);
+            }else{
+                editor.putInt(getString(R.string.decis),delFromRaschet15);
+            }
+        }
+        if(countSumm16>0)
+        {
+            if(countSumm16<=mSettings.getInt(getString(R.string.mospilan), 0))
+            {
+                delFromRaschet16= mSettings.getInt(getString(R.string.mospilan), 0) - countSumm16;
+                editor.putInt(getString(R.string.mospilan),delFromRaschet16);
+            }else{
+                editor.putInt(getString(R.string.mospilan),delFromRaschet16);
+            }
+        }
+        if(countSumm17>0)
+        {
+            if(countSumm17<=mSettings.getInt(getString(R.string.vuskalKombiB), 0))
+            {
+                delFromRaschet17= mSettings.getInt(getString(R.string.vuskalKombiB), 0) - countSumm17;
+                editor.putInt(getString(R.string.vuskalKombiB),delFromRaschet17);
+            }else{
+                editor.putInt(getString(R.string.vuskalKombiB),delFromRaschet17);
+            }
+        }
+        if(countSumm18>0)
+        {
+            if(countSumm18<=mSettings.getInt(getString(R.string.maksikropZavyaz), 0))
+            {
+                delFromRaschet18= mSettings.getInt(getString(R.string.maksikropZavyaz), 0) - countSumm18;
+                editor.putInt(getString(R.string.maksikropZavyaz),delFromRaschet18);
+            }else{
+                editor.putInt(getString(R.string.maksikropZavyaz),delFromRaschet18);
+            }
+        }
+        editor.apply();
 
     }
 
+    private void msgToIformAlert() {
+        msgToInform=getString(R.string.msgToInform);
+        if (preparat1.equals("")!=true)
+        {
+            msgToInform+=preparat1+" - ";
+            if (countSumm1>0) {
+                msgToInform += String.valueOf(countSumm1) + getString(R.string.gramm) +"\n";
+            }
+            if (countSumm2>0) {
+                msgToInform += String.valueOf(countSumm2) + getString(R.string.gramm)+"\n";
+            }
+            if (countSumm3>0) {
+                msgToInform += String.valueOf(countSumm3) + getString(R.string.gramm)+"\n";
+            }
+            if (countSumm4>0) {
+                msgToInform += String.valueOf(countSumm4) + getString(R.string.gramm)+"\n";
+            }
+            if (countSumm5>0) {
+                msgToInform += String.valueOf(countSumm5) + getString(R.string.milliliters)+"\n";
+            }
+            if (countSumm6>0) {
+                msgToInform += String.valueOf(countSumm6) + getString(R.string.milliliters)+"\n";
+            }
+        }
+        if (preparat2.equals("")!=true)
+        {
+            msgToInform+=preparat2+" - ";
+            if (countSumm7>0) {
+                msgToInform += String.valueOf(countSumm7) + getString(R.string.gramm)+"\n";
+            }
+            if (countSumm8>0) {
+                msgToInform += String.valueOf(countSumm8) + getString(R.string.gramm)+"\n";
+            }
+            if (countSumm9>0) {
+                msgToInform += String.valueOf(countSumm9) + getString(R.string.milliliters)+"\n";
+            }
+            if (countSumm10>0) {
+                msgToInform += String.valueOf(countSumm10) + getString(R.string.milliliters)+"\n";
+            }
+        }
+        if (preparat3.equals("")!=true)
+        {
+            msgToInform+=preparat3+" - ";
+            if (countSumm11>0) {
+                msgToInform += String.valueOf(countSumm11) + getString(R.string.gramm)+"\n";
+            }
+            if (countSumm12>0) {
+                msgToInform += String.valueOf(countSumm12) + getString(R.string.gramm)+"\n";
+            }
+            if (countSumm13>0) {
+                msgToInform += String.valueOf(countSumm13) + getString(R.string.gramm)+"\n";
+            }
+        }
+        if (preparat4.equals("")!=true) {
+            msgToInform += preparat4 + " - ";
+            if (countSumm14 > 0) {
+                msgToInform += String.valueOf(countSumm14) + getString(R.string.gramm) + "\n";
+            }
+            if (countSumm15 > 0) {
+                msgToInform += String.valueOf(countSumm15) + getString(R.string.gramm) + "\n";
+            }
+            if (countSumm16 > 0) {
+                msgToInform += String.valueOf(countSumm16) + getString(R.string.gramm) + "\n";
+            }
+        }
+        if (preparat5.equals("") != true) {
+            msgToInform += preparat5 + " - ";
+            if (countSumm17 > 0) {
+                msgToInform += String.valueOf(countSumm17) + getString(R.string.gramm)+"\n";
+            }
+            if (countSumm18 > 0) {
+                msgToInform += String.valueOf(countSumm18) + getString(R.string.milliliters)+"\n";
+            }
+        }
+    }
+
+
     private void toSPRaschetnoe()
     {
-            final SharedPreferences.Editor editor = mSettings.edit();
-            if (needBuy1 > 0) {
-                editor.putInt(getString(R.string.horusRasch), needBuy1);
-            }
-            if (needBuy2 > 0) {
-                editor.putInt(getString(R.string.ridomilRasch), needBuy2);
-            }
-            if (needBuy3 > 0) {
-                editor.putInt(getString(R.string.melodiduoRasch), needBuy3);
-            }
-            if (needBuy4 > 0) {
-                editor.putInt(getString(R.string.strobiRasch), needBuy4);
-            }
-            if (needBuy5 > 0) {
-                editor.putInt(getString(R.string.kvadrisRasch), needBuy5);
-            }
-            if (needBuy6 > 0) {
-                editor.putInt(getString(R.string.kuproksatRasch), needBuy6);
-            }
-            if (needBuy7 > 0) {
-                editor.putInt(getString(R.string.topazRasch), needBuy7);
-            }
-            if (needBuy8 > 0) {
-                editor.putInt(getString(R.string.topsinRasch), needBuy8);
-            }
-            if (needBuy9 > 0) {
-                editor.putInt(getString(R.string.falkonRasch), needBuy9);
-            }
-            if (needBuy10 > 0) {
-                editor.putInt(getString(R.string.tiltRasch), needBuy10);
-            }
-            if (needBuy11 > 0) {
-                editor.putInt(getString(R.string.plantafol30Rasch), needBuy11);
-            }
-            if (needBuy12 > 0) {
-                editor.putInt(getString(R.string.plantafol20Rasch), needBuy12);
-            }
-            if (needBuy13 > 0) {
-                editor.putInt(getString(R.string.plantafol5Rasch), needBuy13);
-            }
-            if (needBuy14 > 0) {
-                editor.putInt(getString(R.string.sanmaytRasch), needBuy14);
-            }
-            if (needBuy15 > 0) {
-                editor.putInt(getString(R.string.decisRasch), needBuy15);
-            }
-            if (needBuy16 > 0) {
-                editor.putInt(getString(R.string.mospilanRasch), needBuy16);
-            }
-            if (needBuy17 > 0) {
-                editor.putInt(getString(R.string.vuskalKombiBrasch), needBuy17);
-            }
-            if (needBuy18 > 0) {
-                editor.putInt(getString(R.string.maksikropZavyazRasch), needBuy18);
-            }
-            editor.apply();
+        final SharedPreferences.Editor editor = mSettings.edit();
+        if (needBuy1 > 0) {
+            editor.putInt(getString(R.string.horusRasch), needBuy1);
+        }
+        if (needBuy2 > 0) {
+            editor.putInt(getString(R.string.ridomilRasch), needBuy2);
+        }
+        if (needBuy3 > 0) {
+            editor.putInt(getString(R.string.melodiduoRasch), needBuy3);
+        }
+        if (needBuy4 > 0) {
+            editor.putInt(getString(R.string.strobiRasch), needBuy4);
+        }
+        if (needBuy5 > 0) {
+            editor.putInt(getString(R.string.kvadrisRasch), needBuy5);
+        }
+        if (needBuy6 > 0) {
+            editor.putInt(getString(R.string.kuproksatRasch), needBuy6);
+        }
+        if (needBuy7 > 0) {
+            editor.putInt(getString(R.string.topazRasch), needBuy7);
+        }
+        if (needBuy8 > 0) {
+            editor.putInt(getString(R.string.topsinRasch), needBuy8);
+        }
+        if (needBuy9 > 0) {
+            editor.putInt(getString(R.string.falkonRasch), needBuy9);
+        }
+        if (needBuy10 > 0) {
+            editor.putInt(getString(R.string.tiltRasch), needBuy10);
+        }
+        if (needBuy11 > 0) {
+            editor.putInt(getString(R.string.plantafol30Rasch), needBuy11);
+        }
+        if (needBuy12 > 0) {
+            editor.putInt(getString(R.string.plantafol20Rasch), needBuy12);
+        }
+        if (needBuy13 > 0) {
+            editor.putInt(getString(R.string.plantafol5Rasch), needBuy13);
+        }
+        if (needBuy14 > 0) {
+            editor.putInt(getString(R.string.sanmaytRasch), needBuy14);
+        }
+        if (needBuy15 > 0) {
+            editor.putInt(getString(R.string.decisRasch), needBuy15);
+        }
+        if (needBuy16 > 0) {
+            editor.putInt(getString(R.string.mospilanRasch), needBuy16);
+        }
+        if (needBuy17 > 0) {
+            editor.putInt(getString(R.string.vuskalKombiBrasch), needBuy17);
+        }
+        if (needBuy18 > 0) {
+            editor.putInt(getString(R.string.maksikropZavyazRasch), needBuy18);
+        }
+        editor.apply();
     }
 
     private void showAlertCount() {
@@ -676,276 +916,198 @@ public class Raschet extends Fragment{
 
     private void raschetZavyaz() {
 
-            needBuy17=0;needBuy18=0;
+        needBuy17=0;needBuy18=0;
+        countSumm17=0; countSumm18=0;
 
+        if (poss5 == 1) {
+            preparat5=getString(R.string.vuskalKombiB);
+            count17 = mSettings.getInt(getString(R.string.vuskalKombiB), 0);
+            countSumm17 = 12 * count;
 
-            if (poss5 == 1) {
-                preparat5=getString(R.string.vuskalKombiB);
-                count17 = mSettings.getInt(getString(R.string.vuskalKombiB), 0);
-
-                if (count17 >= 12 * count) {
-                    countSumm17 = 12 * count;
-
-
-                } else {
-                    needBuy17 = 12 * count - count17;
-
-                }
+            if (count17 <countSumm17) {
+                needBuy17 = 12 * count - count17;
             }
-            if (poss5 == 2) {
-                preparat5=getString(R.string.maksikropZavyaz);
-                count18 = mSettings.getInt(getString(R.string.maksikropZavyaz), 0);
+        }
+        if (poss5 == 2) {
+            preparat5=getString(R.string.maksikropZavyaz);
+            count18 = mSettings.getInt(getString(R.string.maksikropZavyaz), 0);
+            countSumm18 = 50 * count;
 
-                if (count18 >= 50 * count) {
-                    countSumm18 = 50 * count;
-
-
-                } else {
-                    needBuy18 = 50 * count - count18;
-                }
+            if (count18 < 50 * count) {
+                needBuy18 = 50 * count - count18;
             }
+        }
     }
 
     private void raschetInsekticid() {
 
-            needBuy14=0;needBuy15=0;needBuy16=0;
+        needBuy14=0;needBuy15=0;needBuy16=0;
+        countSumm14=0; countSumm15=0; countSumm16=0;
 
+        if (poss4 == 1) {
+            preparat4=getString(R.string.sanmayt);
+            count14 = mSettings.getInt(getString(R.string.sanmayt), 0);
+            countSumm14 = 12 * count;
 
-            if (poss4 == 1) {
-                preparat4=getString(R.string.sanmayt);
-                count14 = mSettings.getInt(getString(R.string.sanmayt), 0);
-
-                if (count14 >= 12 * count) {
-                    countSumm14 = 12 * count;
-
-
-                } else {
-                    needBuy14 = 12 * count - count14;
-
-                }
+            if (count14 < 12 * count) {
+                needBuy14 = 12 * count - count14;
             }
-            if (poss4 == 2) {
-                preparat4=getString(R.string.decis);
-                count15 = mSettings.getInt(getString(R.string.decis), 0);
-
-                if (count15 >= 50 * count) {
-                    countSumm15 = 50 * count;
-
-
-                } else {
-                    needBuy15 = 50 * count - count15;
-
-                }
-            }
-            if (poss4 == 3) {
-                preparat4=getString(R.string.mospilan);
-                count16 = mSettings.getInt(getString(R.string.mospilan), 0);
-
-                if (count16 >= 50 * count) {
-                    countSumm16 = 50 * count;
-
-
-                } else {
-                    needBuy16 = 50 * count - count16;
-
-                }
-            }
-
         }
+        if (poss4 == 2) {
+            preparat4=getString(R.string.decis);
+            count15 = mSettings.getInt(getString(R.string.decis), 0);
+            countSumm15 = 50 * count;
+            if (count15 < 50 * count) {
+                needBuy15 = 50 * count - count15;
+            }
+        }
+        if (poss4 == 3) {
+            preparat4=getString(R.string.mospilan);
+            count16 = mSettings.getInt(getString(R.string.mospilan), 0);
+            countSumm16 = 50 * count;
+            if (count16 < 50 * count) {
+                needBuy16 = 50 * count - count16;
+            }
+        }
+    }
 
 
     private void raschetUdobrenija() {
 
-            needBuy11=0;needBuy12=0;needBuy13=0;
+        needBuy11=0;needBuy12=0;needBuy13=0;
+        countSumm11=0; countSumm12=0; countSumm13=0;
 
-            if (poss3 == 1) {
-                preparat3=getString(R.string.plantafol30);
-                count11 = mSettings.getInt(getString(R.string.plantafol30), 0);
+        if (poss3 == 1) {
+            preparat3=getString(R.string.plantafol30);
+            count11 = mSettings.getInt(getString(R.string.plantafol30), 0);
+            countSumm11 = 12 * count;
 
-                if (count11 >= 12 * count) {
-                    countSumm11 = 12 * count;
-
-
-                } else {
-                    needBuy11 = 12 * count - count11;
-
-                }
-            }
-            if (poss3 == 2) {
-                preparat3=getString(R.string.plantafol20);
-                count12 = mSettings.getInt(getString(R.string.plantafol20), 0);
-
-                if (count12 >= 50 * count) {
-                    countSumm12 = 50 * count;
-
-
-                } else {
-                    needBuy12 = 50 * count - count12;
-
-                }
-            }
-            if (poss3 == 3) {
-                preparat3=getString(R.string.plantafol5);
-                count13 = mSettings.getInt(getString(R.string.plantafol5), 0);
-
-                if (count13 >= 50 * count) {
-                    countSumm13 = 50 * count;
-
-
-                } else {
-                    needBuy13 = 50 * count - count13;
-
-                }
+            if (count11 < 12 * count) {
+                needBuy11 = 12 * count - count11;
             }
         }
+        if (poss3 == 2) {
+            preparat3=getString(R.string.plantafol20);
+            count12 = mSettings.getInt(getString(R.string.plantafol20), 0);
+            countSumm12 = 50 * count;
+
+            if (count12 < 50 * count) {
+                needBuy12 = 50 * count - count12;
+            }
+        }
+        if (poss3 == 3) {
+            preparat3=getString(R.string.plantafol5);
+            count13 = mSettings.getInt(getString(R.string.plantafol5), 0);
+            countSumm13 = 50 * count;
+
+            if (count13 < 50 * count) {
+                needBuy13 = 50 * count - count13;
+            }
+        }
+    }
 
 
     private void raschetOidium() {
 
-            needBuy7=0;needBuy8=0;needBuy9=0;needBuy10=0;
+        needBuy7=0;needBuy8=0;needBuy9=0;needBuy10=0;
+        countSumm7=0; countSumm8=0; countSumm9=0; countSumm10=0;
 
 
-            if (poss2 == 1) {
-                preparat2=getString(R.string.topaz);
-                count7 = mSettings.getInt(getString(R.string.topaz), 0);
+        if (poss2 == 1) {
+            preparat2=getString(R.string.topaz);
+            count7 = mSettings.getInt(getString(R.string.topaz), 0);
+            countSumm7 = 12 * count;
 
-                if (count7 >= 12 * count) {
-                    countSumm7 = 12 * count;
-
-
-                } else {
-                    needBuy7 = 12 * count - count7;
-
-                }
+            if (count7 < 12 * count) {
+                needBuy7 = 12 * count - count7;
             }
-            if (poss2 == 2) {
-                preparat2=getString(R.string.topsin);
-                count8 = mSettings.getInt(getString(R.string.topsin), 0);
-
-                if (count8 >= 50 * count) {
-                    countSumm8 = 50 * count;
-
-
-                } else {
-                    needBuy8 = 50 * count - count8;
-
-                }
-            }
-            if (poss2 == 3) {
-                preparat2=getString(R.string.falkon);
-                count9 = mSettings.getInt(getString(R.string.falkon), 0);
-
-                if (count9 >= 50 * count) {
-                    countSumm9 = 50 * count;
-
-
-                } else {
-                    needBuy9 = 50 * count - count9;
-
-                }
-            }
-            if (poss2 == 4) {
-                preparat2=getString(R.string.tilt);
-                count10 = mSettings.getInt(getString(R.string.tilt), 0);
-
-                if (count10 >= 3 * count) {
-                    countSumm10 = 3 * count;
-
-
-                } else {
-                    needBuy10 = 3 * count - count10;
-
-                }
-            }
-
         }
+        if (poss2 == 2) {
+            preparat2=getString(R.string.topsin);
+            count8 = mSettings.getInt(getString(R.string.topsin), 0);
+            countSumm8 = 50 * count;
+            if (count8 < 50 * count) {
+                needBuy8 = 50 * count - count8;
+            }
+        }
+        if (poss2 == 3) {
+            preparat2=getString(R.string.falkon);
+            count9 = mSettings.getInt(getString(R.string.falkon), 0);
+            countSumm9 = 50 * count;
+            if (count9 < 50 * count) {
+                needBuy9 = 50 * count - count9;
+            }
+        }
+        if (poss2 == 4) {
+            preparat2=getString(R.string.tilt);
+            count10 = mSettings.getInt(getString(R.string.tilt), 0);
+            countSumm10 = 3 * count;
+            if (count10 < 3 * count) {
+                needBuy10 = 3 * count - count10;
+            }
+        }
+    }
 
 
     private void raschetMildiu() {
 
-        needBuy1 = 0;
-        needBuy2 = 0;
-        needBuy3 = 0;
-        needBuy4 = 0;
-        needBuy5 = 0;
-        needBuy6 = 0;
+        needBuy1 = 0; needBuy2 = 0; needBuy3 = 0; needBuy4 = 0; needBuy5 = 0; needBuy6 = 0;
+        countSumm1=0; countSumm2=0; countSumm3=0; countSumm4=0; countSumm5=0; countSumm6=0;
 
         if (poss1 == 1) {
             preparat1 = getString(R.string.horus);
             count1 = mSettings.getInt(getString(R.string.horus), 0);
-            if (count1 >= 12 * count) {
-                countSumm1 = 12 * count;
-            } else {
-                needBuy1 = 12 * count - count1;
+            countSumm1 = 12 * count;
 
+            if (count1 < 12 * count) {
+                needBuy1 = 12 * count - count1;
             }
         }
         if (poss1 == 2) {
             preparat1 = getString(R.string.ridomil);
             count2 = mSettings.getInt(getString(R.string.ridomil), 0);
-            if (count2 >= 50 * count) {
-                countSumm2 = 50 * count;
+            countSumm2 = 50 * count;
 
-
-            } else {
+            if (count2 < 50 * count) {
                 needBuy2 = 50 * count - count2;
-
             }
         }
         if (poss1 == 3) {
             preparat1 = getString(R.string.melodiduo);
             count3 = mSettings.getInt(getString(R.string.melodiduo), 0);
+            countSumm3 = 50 * count;
 
-            if (count3 >= 50 * count) {
-                countSumm3 = 50 * count;
-
-            } else {
+            if (count3 < 50 * count) {
                 needBuy3 = 50 * count - count3;
-
             }
         }
         if (poss1 == 4) {
             preparat1 = getString(R.string.strobi);
             count4 = mSettings.getInt(getString(R.string.strobi), 0);
+            countSumm4 = 3 * count;
 
-            if (count4 >= 3 * count) {
-                countSumm4 = 3 * count;
-
-
-            } else {
+            if (count4 < 3 * count) {
                 needBuy4 = 3 * count - count4;
-
             }
             if (poss1 == 5) {
                 preparat1 = getString(R.string.kvadris);
                 count5 = mSettings.getInt(getString(R.string.kvadris), 0);
+                countSumm5 = 6 * count;
 
                 if (count5 >= 6 * count) {
-                    countSumm5 = 6 * count;
-
-
-                } else {
                     needBuy5 = 6 * count - count5;
-
                 }
             }
             if (poss1 == 6) {
                 preparat1 = getString(R.string.kuproksat);
                 count6 = mSettings.getInt(getString(R.string.kuproksat), 0);
+                countSumm6 = 100 * count;
 
                 if (count6 >= 100 * count) {
-                    countSumm6 = 100 * count;
-
-
-                } else {
                     needBuy6 = 100 * count - count6;
-
                 }
             }
-
         }
-
-
     }
 
 
