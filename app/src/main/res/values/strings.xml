@@ -101,6 +101,9 @@
     <string name="cancelButton">Не добавлять</string>
     <string name="positiveButton">Добывить в Календарь</string>
     <string name="msgToInform">Вам необходимо : \n</string>
+    <string name="positiveChengeSpreyingButton">Изменить в Календаре</string>
+    <string name="cancelChengeSpreyingButton">Не изменять</string>
+    <string name="msgChangeSpreying">У Вас уже создано это опрыскивание</string>
 
 
 </resources>
