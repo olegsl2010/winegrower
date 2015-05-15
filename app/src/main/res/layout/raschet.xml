@@ -26,7 +26,6 @@
             android:text="@string/raschetZaglavie"
             android:id="@+id/raschetZaglavie"
             android:layout_gravity="center_horizontal"
-            style="@style/Base.TextAppearance.AppCompat.Display1"
             android:textSize="25dp" />
 
     </LinearLayout>

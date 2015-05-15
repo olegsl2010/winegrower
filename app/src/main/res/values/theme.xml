@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="HebraTheme" parent="@android:style/Theme.Black">
+
+        <item name="android:textColor">#fffcff53</item>
+
+        <item name="android:buttonStyle">@style/HabraThemeButton</item>
+
+        <item name="android:spinnerStyle">@style/SpinnerTheme</item>
+        <item name="android:editTextStyle">@style/EditText</item>
+
+    </style>
+    <style name="HabraThemeButton" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/hbutton</item>
+        <item name="android:textColor">#fffcff53</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="@android:style/Widget.Spinner">
+        <item name="android:background">@drawable/hspinner</item>
+        <item name="android:popupBackground">@drawable/hspinner</item>
+    </style>
+    <style name="EditText" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/hspinner</item>
+        <item name="android:textColor">#fffcff53</item>
+        <item name="android:text">#fffcff53</item>
+    </style>
+
+</resources>

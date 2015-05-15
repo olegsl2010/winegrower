@@ -103,8 +103,8 @@ public class Raschet extends Fragment{
             public void onItemSelected(AdapterView<?> parent, View view, int pos,
                                        long id) {
                 poss = spinnerMain.getSelectedItemPosition();
-                ((TextView) parent.getChildAt(0)).setTextColor(Color.MAGENTA);
-                ((TextView) parent.getChildAt(0)).setTextSize(20);
+//                ((TextView) parent.getChildAt(0)).setTextColor(Color.MAGENTA);
+//                ((TextView) parent.getChildAt(0)).setTextSize(20);
                 ifSelectedItem1();
                 ifSelectedItem2();
                 ifSelectedItem3();

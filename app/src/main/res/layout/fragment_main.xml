@@ -16,7 +16,8 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/soonSpraying"
             android:id="@+id/soonSpraying"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:autoText="false" />
 
     </LinearLayout>
 
