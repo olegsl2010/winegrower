@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="HebraTheme" parent="@android:style/Theme.Black">
+        <!--<item name="android:background">@drawable/imgbck</item>-->
 
-        <item name="android:textColor">#fffcff53</item>
+        <item name="android:textColor">#ffff009a</item>
 
         <item name="android:buttonStyle">@style/HabraThemeButton</item>
 
@@ -24,6 +25,7 @@
         <item name="android:background">@drawable/hspinner</item>
         <item name="android:textSize">18sp</item>
         <item name="android:popupBackground">@drawable/hspinner</item>
+        <item name="colorControlNormal">#ffd6faff</item>
     </style>
     <style name="EditText" parent="@android:style/Widget.EditText">
         <item name="android:background">@drawable/hspinner</item>

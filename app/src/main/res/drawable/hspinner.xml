@@ -12,7 +12,7 @@
 
         </shape>
         </item>
-        <!--<item><bitmap android:gravity="bottom|right" android:src="@drawable/images" />-->
+        <!--<item><bitmap android:gravity="bottom|right" android:src="/spinner_ab_default_holo_dark_am" />-->
         <!--</item>-->
 
     </layer-list></item>
