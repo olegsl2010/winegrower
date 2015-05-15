@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -456,9 +457,9 @@ public class Raschet extends Fragment{
                 .setPositiveButton(R.string.positiveChengeSpreyingButton,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                    showAlertCount();
-                                    toSPRaschetnoe();
-                                    saveToCelendar();
+                                showAlertCount();
+                                toSPRaschetnoe();
+                                saveToCelendar();
                                 dialog.cancel();
                             }
                         })
@@ -1126,6 +1127,7 @@ public class Raschet extends Fragment{
         countSumm1=0; countSumm2=0; countSumm3=0; countSumm4=0; countSumm5=0; countSumm6=0;
 
         if (poss1 == 1) {
+
             preparat1 = getString(R.string.horus);
             count1 = mSettings.getInt(getString(R.string.horus), 0);
             countSumm1 = 12 * count;
@@ -1160,26 +1162,28 @@ public class Raschet extends Fragment{
             if (count4 < 3 * count) {
                 needBuy4 = 3 * count - count4;
             }
-            if (poss1 == 5) {
-                preparat1 = getString(R.string.kvadris);
-                count5 = mSettings.getInt(getString(R.string.kvadris), 0);
-                countSumm5 = 6 * count;
+        }
+        if (poss1 == 5) {
 
-                if (count5 >= 6 * count) {
-                    needBuy5 = 6 * count - count5;
-                }
+            preparat1 = getString(R.string.kvadris);
+            count5 = mSettings.getInt(getString(R.string.kvadris), 0);
+            countSumm5 = 6 * count;
+
+            if (count5 >= 6 * count) {
+                needBuy5 = 6 * count - count5;
             }
-            if (poss1 == 6) {
-                preparat1 = getString(R.string.kuproksat);
-                count6 = mSettings.getInt(getString(R.string.kuproksat), 0);
-                countSumm6 = 100 * count;
+        }
+        if (poss1 == 6) {
+            preparat1 = getString(R.string.kuproksat);
+            count6 = mSettings.getInt(getString(R.string.kuproksat), 0);
+            countSumm6 = 100 * count;
 
-                if (count6 >= 100 * count) {
-                    needBuy6 = 100 * count - count6;
-                }
+            if (count6 >= 100 * count) {
+                needBuy6 = 100 * count - count6;
             }
         }
     }
+
 
 
     private void vedra() {

@@ -12,5 +12,8 @@
 
         </shape>
         </item>
+        <!--<item><bitmap android:gravity="bottom|right" android:src="@drawable/images" />-->
+        <!--</item>-->
+
     </layer-list></item>
 </selector>

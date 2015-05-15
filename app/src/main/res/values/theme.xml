@@ -8,21 +8,34 @@
 
         <item name="android:spinnerStyle">@style/SpinnerTheme</item>
         <item name="android:editTextStyle">@style/EditText</item>
+        <item name="android:alertDialogTheme">@style/AlertDialog</item>
+
+
+
 
     </style>
     <style name="HabraThemeButton" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/hbutton</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textColor">#fffcff53</item>
     </style>
 
     <style name="SpinnerTheme" parent="@android:style/Widget.Spinner">
         <item name="android:background">@drawable/hspinner</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:popupBackground">@drawable/hspinner</item>
     </style>
     <style name="EditText" parent="@android:style/Widget.EditText">
         <item name="android:background">@drawable/hspinner</item>
         <item name="android:textColor">#fffcff53</item>
-        <item name="android:text">#fffcff53</item>
+
+    </style>
+
+    <style name="AlertDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/hspinner</item>
+        <item name="android:buttonStyle">@style/HabraThemeButton</item>
+
+
     </style>
 
 </resources>
