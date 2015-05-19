@@ -407,45 +407,91 @@ public class Raschet extends Fragment{
             if (mSettings.contains(getString(R.string.oprSelect1)) == true) {
                 alertChangeSpraing();
             }
+            else{
+                showAlertCount();
+                toSPRaschetnoe();
+                saveToCelendar();
+            }
         }
+
         if (whatRaschCreated==2) {
             if (mSettings.contains(getString(R.string.oprSelect2)) == true) {
                 alertChangeSpraing();
+            }
+            else{
+                showAlertCount();
+                toSPRaschetnoe();
+                saveToCelendar();
             }
         }
         if (whatRaschCreated==3) {
             if (mSettings.contains(getString(R.string.oprSelect3)) == true) {
                 alertChangeSpraing();
             }
+            else{
+                showAlertCount();
+                toSPRaschetnoe();
+                saveToCelendar();
+            }
         }
         if (whatRaschCreated==4) {
             if (mSettings.contains(getString(R.string.oprSelect4)) == true) {
                 alertChangeSpraing();
+            }
+            else{
+                showAlertCount();
+                toSPRaschetnoe();
+                saveToCelendar();
             }
         }
         if (whatRaschCreated==5) {
             if (mSettings.contains(getString(R.string.oprSelect5)) == true) {
                 alertChangeSpraing();
             }
+            else{
+                showAlertCount();
+                toSPRaschetnoe();
+                saveToCelendar();
+            }
         }
         if (whatRaschCreated==6) {
             if (mSettings.contains(getString(R.string.oprSelect6)) == true) {
                 alertChangeSpraing();
+            }
+            else{
+                showAlertCount();
+                toSPRaschetnoe();
+                saveToCelendar();
             }
         }
         if (whatRaschCreated==7) {
             if (mSettings.contains(getString(R.string.oprSelect7)) == true) {
                 alertChangeSpraing();
             }
+            else{
+                showAlertCount();
+                toSPRaschetnoe();
+                saveToCelendar();
+            }
         }
         if (whatRaschCreated==8) {
             if (mSettings.contains(getString(R.string.oprSelect8)) == true) {
                 alertChangeSpraing();
             }
+            else{
+                showAlertCount();
+                toSPRaschetnoe();
+                saveToCelendar();
+            }
         }
         if (whatRaschCreated==9) {
             if (mSettings.contains(getString(R.string.oprSelect9)) == true) {
                 alertChangeSpraing();
+            }
+            else{
+                showAlertCount();
+                toSPRaschetnoe();
+                saveToCelendar();
             }
         }
 
