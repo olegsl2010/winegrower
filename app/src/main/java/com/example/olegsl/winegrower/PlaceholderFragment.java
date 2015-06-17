@@ -42,6 +42,7 @@ public class PlaceholderFragment extends Fragment implements View.OnClickListene
         information.setOnClickListener(this);
         celendar.setOnClickListener(this);
 
+
         return rootView;
     }
 
@@ -55,7 +56,7 @@ public class PlaceholderFragment extends Fragment implements View.OnClickListene
         {
             FragmentTransaction FragManager = getFragmentManager().beginTransaction();
             FragManager.addToBackStack("");
-            FragManager.replace(R.id.container, new Reaktiv());
+            FragManager.replace(R.id.container, new Reagetns());
             FragManager.commit();
         }
         else if (buttonIndex==2)
@@ -69,7 +70,7 @@ public class PlaceholderFragment extends Fragment implements View.OnClickListene
         {
             FragmentTransaction FragManager = getFragmentManager().beginTransaction();
             FragManager.addToBackStack("");
-            FragManager.replace(R.id.container, new Raschet());
+            FragManager.replace(R.id.container, new Calculate());
             FragManager.commit();
         }
         else if (buttonIndex==4)

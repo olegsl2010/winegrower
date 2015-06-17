@@ -5,10 +5,8 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,10 +14,9 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 
-public class Raschet extends Fragment{
+public class Calculate extends Fragment{
     Button backbutt;
     Button button;
     EditText vedro;
@@ -1176,6 +1173,11 @@ public class Raschet extends Fragment{
 
             preparat1 = getString(R.string.horus);
             count1 = mSettings.getInt(getString(R.string.horus), 0);
+            if(mSettings.contains(getString(R.string.oprSelect6)) == true)
+            {
+                countSumm1=mSettings.getInt(getString(R.string.horusSumm),0);
+            }
+
             countSumm1 = 12 * count;
 
             if (count1 < 12 * count) {
@@ -1449,7 +1451,7 @@ public class Raschet extends Fragment{
     }
 
     public static void setWhatRaschCreated(int whatRaschCreated) {
-        Raschet.whatRaschCreated = whatRaschCreated;
+        Calculate.whatRaschCreated = whatRaschCreated;
     }
 
 }

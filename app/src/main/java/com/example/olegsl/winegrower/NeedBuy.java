@@ -25,7 +25,7 @@ public class NeedBuy extends Fragment{
         mSettings = getActivity().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 
         text=(TextView)rootView.findViewById(R.id.textView30);
-        if (Raschet.allertShow=true) {
+        if (Calculate.allertShow=true) {
             whatCountNeedBuy();
 
 

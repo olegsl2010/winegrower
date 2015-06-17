@@ -73,10 +73,10 @@ public class Celendar extends Fragment{
             }});
 
 
-        System.out.println(Raschet.getWhatRaschCreated());
+        System.out.println(Calculate.getWhatRaschCreated());
 
         text=(TextView)rootView.findViewById(R.id.textView26);
-        if (Raschet.allertShow=false) {
+        if (Calculate.allertShow=false) {
             text.setText((String.valueOf(mSettings.getInt(getString(R.string.horusRasch), 0))) + "-");
         }
         return rootView;

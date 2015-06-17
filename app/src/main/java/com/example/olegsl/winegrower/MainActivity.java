@@ -19,6 +19,7 @@ public class MainActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         fragment = new PlaceholderFragment();
         setContentView(R.layout.activity_main);
