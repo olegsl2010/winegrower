@@ -27,13 +27,7 @@ public class NeedBuy extends Fragment{
         text=(TextView)rootView.findViewById(R.id.textView30);
         if (Calculate.allertShow=true) {
             whatCountNeedBuy();
-
-
         }
-
-
-
-
         backbutt = (Button) rootView.findViewById(R.id.backButton3);
         backbutt.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

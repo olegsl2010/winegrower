@@ -18,6 +18,7 @@ public class PlaceholderFragment extends Fragment implements View.OnClickListene
     Button needBuy;
     Button information;
     Button celendar;
+    FragmentTransaction FragManager;
 
 
     public PlaceholderFragment() {
@@ -50,49 +51,45 @@ public class PlaceholderFragment extends Fragment implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-
+        FragManager=null;
         int buttonIndex = translateIdToIndex(v.getId());
-        if (buttonIndex==1)
-        {
-            FragmentTransaction FragManager = getFragmentManager().beginTransaction();
+        switch (buttonIndex){
+            case(1):
+            FragManager = getFragmentManager().beginTransaction();
             FragManager.addToBackStack("");
             FragManager.replace(R.id.container, new Reagetns());
             FragManager.commit();
-        }
-        else if (buttonIndex==2)
-        {
-            FragmentTransaction FragManager = getFragmentManager().beginTransaction();
+                break;
+            case (2):
+            FragManager = getFragmentManager().beginTransaction();
             FragManager.addToBackStack("");
             FragManager.replace(R.id.container, new Sorts());
             FragManager.commit();
-        }
-        else if (buttonIndex==3)
-        {
-            FragmentTransaction FragManager = getFragmentManager().beginTransaction();
+                break;
+            case(3):
+            FragManager = getFragmentManager().beginTransaction();
             FragManager.addToBackStack("");
             FragManager.replace(R.id.container, new Calculate());
             FragManager.commit();
-        }
-        else if (buttonIndex==4)
-        {
-            FragmentTransaction FragManager = getFragmentManager().beginTransaction();
+                break;
+            case(4):
+            FragManager = getFragmentManager().beginTransaction();
             FragManager.addToBackStack("");
             FragManager.replace(R.id.container, new NeedBuy());
             FragManager.commit();
-        }
-        else if (buttonIndex==5)
-        {
-            FragmentTransaction FragManager = getFragmentManager().beginTransaction();
+                break;
+            case(5):
+            FragManager = getFragmentManager().beginTransaction();
             FragManager.addToBackStack("");
             FragManager.replace(R.id.container, new Information());
             FragManager.commit();
-        }
-        else if (buttonIndex==6)
-        {
-            FragmentTransaction FragManager = getFragmentManager().beginTransaction();
+                break;
+            case(6):
+            FragManager = getFragmentManager().beginTransaction();
             FragManager.addToBackStack("");
             FragManager.replace(R.id.container, new Celendar());
             FragManager.commit();
+                break;
         }
     }
 
