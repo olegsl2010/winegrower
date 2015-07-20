@@ -56,7 +56,7 @@ public class Calculate extends Fragment{
 
 
         vedro = (EditText) rootView.findViewById(R.id.editText);
-        vedra();
+        countVedra();
 
         backbutt = (Button) rootView.findViewById(R.id.backButton2);
         backbutt.setOnClickListener(new View.OnClickListener() {
@@ -77,11 +77,8 @@ public class Calculate extends Fragment{
                 poss3=spinner3.getSelectedItemPosition();
                 poss4=spinner4.getSelectedItemPosition();
                 poss5=spinner5.getSelectedItemPosition();
-//
 
                 raschetBakSmesy();
-
-
             }
         });
 
@@ -101,8 +98,6 @@ public class Calculate extends Fragment{
             public void onItemSelected(AdapterView<?> parent, View view, int pos,
                                        long id) {
                 poss = spinnerMain.getSelectedItemPosition();
-//                ((TextView) parent.getChildAt(0)).setTextColor(Color.MAGENTA);
-//                ((TextView) parent.getChildAt(0)).setTextSize(20);
                 ifSelectedItem1();
                 ifSelectedItem2();
                 ifSelectedItem3();
@@ -126,8 +121,8 @@ public class Calculate extends Fragment{
     private void saveToCelendar() {
         msgToAddCelendar="";
         final SharedPreferences.Editor editor = mSettings.edit();
-        if (whatRaschCreated==1)
-        {
+        switch (whatRaschCreated){
+            case(1):
             if (preparat1.equals("")!=true)
             {
                 msgToAddCelendar+=preparat1+"\n";
@@ -149,9 +144,8 @@ public class Calculate extends Fragment{
                 msgToAddCelendar+=preparat5+"\n";
             }
             editor.putString(getString(R.string.oprSelect1),msgToAddCelendar);
-        }
-        if (whatRaschCreated==2)
-        {
+                break;
+            case(2):
             if (preparat1.equals("")!=true)
             {
                 msgToAddCelendar+=preparat1+"\n";
@@ -173,9 +167,8 @@ public class Calculate extends Fragment{
                 msgToAddCelendar+=preparat5+"\n";
             }
             editor.putString(getString(R.string.oprSelect2),msgToAddCelendar);
-        }
-        if (whatRaschCreated==3)
-        {
+                break;
+            case(3):
             if (preparat1.equals("")!=true)
             {
                 msgToAddCelendar+=preparat1+"\n";
@@ -197,9 +190,8 @@ public class Calculate extends Fragment{
                 msgToAddCelendar+=preparat5+"\n";
             }
             editor.putString(getString(R.string.oprSelect3),msgToAddCelendar);
-        }
-        if (whatRaschCreated==4)
-        {
+                break;
+            case(4):
             if (preparat1.equals("")!=true)
             {
                 msgToAddCelendar+=preparat1+"\n";
@@ -221,9 +213,8 @@ public class Calculate extends Fragment{
                 msgToAddCelendar+=preparat5+"\n";
             }
             editor.putString(getString(R.string.oprSelect4),msgToAddCelendar);
-        }
-        if (whatRaschCreated==5)
-        {
+                break;
+            case(5):
             if (preparat1.equals("")!=true)
             {
                 msgToAddCelendar+=preparat1+"\n";
@@ -245,9 +236,8 @@ public class Calculate extends Fragment{
                 msgToAddCelendar+=preparat5+"\n";
             }
             editor.putString(getString(R.string.oprSelect5),msgToAddCelendar);
-        }
-        if (whatRaschCreated==6)
-        {
+                break;
+            case(6):
             if (preparat1.equals("")!=true)
             {
                 msgToAddCelendar+=preparat1+"\n";
@@ -269,9 +259,8 @@ public class Calculate extends Fragment{
                 msgToAddCelendar+=preparat5+"\n";
             }
             editor.putString(getString(R.string.oprSelect6),msgToAddCelendar);
-        }
-        if (whatRaschCreated==7)
-        {
+                break;
+            case(7):
             if (preparat1.equals("")!=true)
             {
                 msgToAddCelendar+=preparat1+"\n";
@@ -293,9 +282,8 @@ public class Calculate extends Fragment{
                 msgToAddCelendar+=preparat5+"\n";
             }
             editor.putString(getString(R.string.oprSelect7),msgToAddCelendar);
-        }
-        if (whatRaschCreated==8)
-        {
+                break;
+            case(8):
             if (preparat1.equals("")!=true)
             {
                 msgToAddCelendar+=preparat1+"\n";
@@ -317,9 +305,8 @@ public class Calculate extends Fragment{
                 msgToAddCelendar+=preparat5+"\n";
             }
             editor.putString(getString(R.string.oprSelect8),msgToAddCelendar);
-        }
-        if (whatRaschCreated==9)
-        {
+                break;
+            case(9):
             if (preparat1.equals("")!=true)
             {
                 msgToAddCelendar+=preparat1+"\n";
@@ -340,7 +327,9 @@ public class Calculate extends Fragment{
             {
                 msgToAddCelendar+=preparat5+"\n";
             }
+
             editor.putString(getString(R.string.oprSelect9),msgToAddCelendar);
+            break;
         }
         editor.apply();
     }
@@ -400,8 +389,9 @@ public class Calculate extends Fragment{
     }
 
     private void alredyAddedSpraying() {
-        if (whatRaschCreated==1) {
-            if (mSettings.contains(getString(R.string.oprSelect1)) == true) {
+        switch (whatRaschCreated){
+            case(1):
+            if (mSettings.contains(getString(R.string.oprSelect1))== true) {
                 alertChangeSpraing();
             }
             else{
@@ -409,10 +399,9 @@ public class Calculate extends Fragment{
                 toSPRaschetnoe();
                 saveToCelendar();
             }
-        }
-
-        if (whatRaschCreated==2) {
-            if (mSettings.contains(getString(R.string.oprSelect2)) == true) {
+                break;
+            case(2):
+            if (mSettings.contains(getString(R.string.oprSelect2))== true) {
                 alertChangeSpraing();
             }
             else{
@@ -420,9 +409,9 @@ public class Calculate extends Fragment{
                 toSPRaschetnoe();
                 saveToCelendar();
             }
-        }
-        if (whatRaschCreated==3) {
-            if (mSettings.contains(getString(R.string.oprSelect3)) == true) {
+                break;
+            case(3):
+            if (mSettings.contains(getString(R.string.oprSelect3))== true) {
                 alertChangeSpraing();
             }
             else{
@@ -430,9 +419,9 @@ public class Calculate extends Fragment{
                 toSPRaschetnoe();
                 saveToCelendar();
             }
-        }
-        if (whatRaschCreated==4) {
-            if (mSettings.contains(getString(R.string.oprSelect4)) == true) {
+                break;
+            case(4):
+            if (mSettings.contains(getString(R.string.oprSelect4))== true) {
                 alertChangeSpraing();
             }
             else{
@@ -440,9 +429,9 @@ public class Calculate extends Fragment{
                 toSPRaschetnoe();
                 saveToCelendar();
             }
-        }
-        if (whatRaschCreated==5) {
-            if (mSettings.contains(getString(R.string.oprSelect5)) == true) {
+                break;
+            case(5):
+            if (mSettings.contains(getString(R.string.oprSelect5))== true) {
                 alertChangeSpraing();
             }
             else{
@@ -450,9 +439,9 @@ public class Calculate extends Fragment{
                 toSPRaschetnoe();
                 saveToCelendar();
             }
-        }
-        if (whatRaschCreated==6) {
-            if (mSettings.contains(getString(R.string.oprSelect6)) == true) {
+                break;
+            case(6):
+            if (mSettings.contains(getString(R.string.oprSelect6))== true) {
                 alertChangeSpraing();
             }
             else{
@@ -460,9 +449,9 @@ public class Calculate extends Fragment{
                 toSPRaschetnoe();
                 saveToCelendar();
             }
-        }
-        if (whatRaschCreated==7) {
-            if (mSettings.contains(getString(R.string.oprSelect7)) == true) {
+                break;
+            case(7):
+            if (mSettings.contains(getString(R.string.oprSelect7))== true) {
                 alertChangeSpraing();
             }
             else{
@@ -470,9 +459,9 @@ public class Calculate extends Fragment{
                 toSPRaschetnoe();
                 saveToCelendar();
             }
-        }
-        if (whatRaschCreated==8) {
-            if (mSettings.contains(getString(R.string.oprSelect8)) == true) {
+                break;
+            case(8):
+            if (mSettings.contains(getString(R.string.oprSelect8))== true) {
                 alertChangeSpraing();
             }
             else{
@@ -480,9 +469,9 @@ public class Calculate extends Fragment{
                 toSPRaschetnoe();
                 saveToCelendar();
             }
-        }
-        if (whatRaschCreated==9) {
-            if (mSettings.contains(getString(R.string.oprSelect9)) == true) {
+                break;
+            case(9):
+            if (mSettings.contains(getString(R.string.oprSelect9))== true) {
                 alertChangeSpraing();
             }
             else{
@@ -490,8 +479,8 @@ public class Calculate extends Fragment{
                 toSPRaschetnoe();
                 saveToCelendar();
             }
+                break;
         }
-
     }
 
     private void alertChangeSpraing() {
@@ -518,192 +507,6 @@ public class Calculate extends Fragment{
         alert.show();
     }
 
-    //    /private void deleteFromReactiv() {
-//        delFromRaschet1=0; delFromRaschet2=0; delFromRaschet3=0; delFromRaschet4=0; delFromRaschet5=0; delFromRaschet6=0; delFromRaschet7=0; delFromRaschet8=0; delFromRaschet9=0; delFromRaschet10=0; delFromRaschet11=0; delFromRaschet12=0; delFromRaschet13=0; delFromRaschet14=0; delFromRaschet15=0; delFromRaschet16=0; delFromRaschet17=0; delFromRaschet18=0;
-//        final SharedPreferences.Editor editor = mSettings.edit();
-//        if(countSumm1>0)
-//        {
-//           if(countSumm1<=mSettings.getInt(getString(R.string.horus), 0))
-//           {
-//               delFromRaschet1= mSettings.getInt(getString(R.string.horus), 0) - countSumm1;
-//              editor.putInt(getString(R.string.horus),delFromRaschet1);
-//           }else{
-//               editor.putInt(getString(R.string.horus),delFromRaschet1);
-//           }
-//        }
-//        if(countSumm2>0)
-//        {
-//            if(countSumm2<=mSettings.getInt(getString(R.string.ridomil), 0))
-//            {
-//                delFromRaschet2= mSettings.getInt(getString(R.string.ridomil), 0) - countSumm2;
-//                editor.putInt(getString(R.string.ridomil),delFromRaschet2);
-//            }else{
-//                editor.putInt(getString(R.string.ridomil),delFromRaschet2);
-//            }
-//        }
-//        if(countSumm3>0)
-//        {
-//            if(countSumm3<=mSettings.getInt(getString(R.string.melodiduo), 0))
-//            {
-//                delFromRaschet3= mSettings.getInt(getString(R.string.melodiduo), 0) - countSumm3;
-//                editor.putInt(getString(R.string.melodiduo),delFromRaschet3);
-//            }else{
-//                editor.putInt(getString(R.string.melodiduo),delFromRaschet3);
-//            }
-//        }
-//        if(countSumm4>0)
-//        {
-//            if(countSumm4<=mSettings.getInt(getString(R.string.strobi), 0))
-//            {
-//                delFromRaschet4= mSettings.getInt(getString(R.string.strobi), 0) - countSumm4;
-//                editor.putInt(getString(R.string.strobi),delFromRaschet4);
-//            }else{
-//                editor.putInt(getString(R.string.strobi),delFromRaschet4);
-//            }
-//        }
-//        if(countSumm5>0)
-//        {
-//            if(countSumm5<=mSettings.getInt(getString(R.string.kvadris), 0))
-//            {
-//                delFromRaschet5= mSettings.getInt(getString(R.string.kvadris), 0) - countSumm5;
-//                editor.putInt(getString(R.string.kvadris),delFromRaschet5);
-//            }else{
-//                editor.putInt(getString(R.string.kvadris),delFromRaschet5);
-//            }
-//        }
-//        if(countSumm6>0)
-//        {
-//            if(countSumm6<=mSettings.getInt(getString(R.string.kuproksat), 0))
-//            {
-//                delFromRaschet6= mSettings.getInt(getString(R.string.kuproksat), 0) - countSumm6;
-//                editor.putInt(getString(R.string.kuproksat),delFromRaschet6);
-//            }else{
-//                editor.putInt(getString(R.string.kuproksat),delFromRaschet6);
-//            }
-//        }
-//        if(countSumm7>0)
-//        {
-//            if(countSumm7<=mSettings.getInt(getString(R.string.topaz), 0))
-//            {
-//                delFromRaschet7= mSettings.getInt(getString(R.string.topaz), 0) - countSumm7;
-//                editor.putInt(getString(R.string.topaz),delFromRaschet7);
-//            }else{
-//                editor.putInt(getString(R.string.topaz),delFromRaschet7);
-//            }
-//        }
-//        if(countSumm8>0)
-//        {
-//            if(countSumm8<=mSettings.getInt(getString(R.string.topsin), 0))
-//            {
-//                delFromRaschet8= mSettings.getInt(getString(R.string.topsin), 0) - countSumm8;
-//                editor.putInt(getString(R.string.topsin),delFromRaschet8);
-//            }else{
-//                editor.putInt(getString(R.string.topsin),delFromRaschet8);
-//            }
-//        }
-//        if(countSumm9>0)
-//        {
-//            if(countSumm9<=mSettings.getInt(getString(R.string.falkon), 0))
-//            {
-//                delFromRaschet9= mSettings.getInt(getString(R.string.falkon), 0) - countSumm9;
-//                editor.putInt(getString(R.string.falkon),delFromRaschet9);
-//            }else{
-//                editor.putInt(getString(R.string.falkon),delFromRaschet9);
-//            }
-//        }
-//        if(countSumm10>0)
-//        {
-//            if(countSumm10<=mSettings.getInt(getString(R.string.tilt), 0))
-//            {
-//                delFromRaschet10= mSettings.getInt(getString(R.string.tilt), 0) - countSumm10;
-//                editor.putInt(getString(R.string.tilt),delFromRaschet10);
-//            }else{
-//                editor.putInt(getString(R.string.tilt),delFromRaschet10);
-//            }
-//        }
-//        if(countSumm11>0)
-//        {
-//            if(countSumm11<=mSettings.getInt(getString(R.string.plantafol30), 0))
-//            {
-//                delFromRaschet11= mSettings.getInt(getString(R.string.plantafol30), 0) - countSumm11;
-//                editor.putInt(getString(R.string.plantafol30),delFromRaschet11);
-//            }else{
-//                editor.putInt(getString(R.string.plantafol30),delFromRaschet11);
-//            }
-//        }
-//        if(countSumm12>0)
-//        {
-//            if(countSumm12<=mSettings.getInt(getString(R.string.plantafol20), 0))
-//            {
-//                delFromRaschet12= mSettings.getInt(getString(R.string.plantafol20), 0) - countSumm12;
-//                editor.putInt(getString(R.string.plantafol20),delFromRaschet12);
-//            }else{
-//                editor.putInt(getString(R.string.plantafol20),delFromRaschet12);
-//            }
-//        }
-//        if(countSumm13>0)
-//        {
-//            if(countSumm13<=mSettings.getInt(getString(R.string.plantafol5), 0))
-//            {
-//                delFromRaschet13= mSettings.getInt(getString(R.string.plantafol5), 0) - countSumm13;
-//                editor.putInt(getString(R.string.plantafol5),delFromRaschet13);
-//            }else{
-//                editor.putInt(getString(R.string.plantafol5),delFromRaschet13);
-//            }
-//        }
-//        if(countSumm14>0)
-//        {
-//            if(countSumm14<=mSettings.getInt(getString(R.string.sanmayt), 0))
-//            {
-//                delFromRaschet14= mSettings.getInt(getString(R.string.sanmayt), 0) - countSumm14;
-//                editor.putInt(getString(R.string.sanmayt),delFromRaschet14);
-//            }else{
-//                editor.putInt(getString(R.string.sanmayt),delFromRaschet14);
-//            }
-//        }
-//        if(countSumm15>0)
-//        {
-//            if(countSumm15<=mSettings.getInt(getString(R.string.decis), 0))
-//            {
-//                delFromRaschet15= mSettings.getInt(getString(R.string.decis), 0) - countSumm15;
-//                editor.putInt(getString(R.string.decis),delFromRaschet15);
-//            }else{
-//                editor.putInt(getString(R.string.decis),delFromRaschet15);
-//            }
-//        }
-//        if(countSumm16>0)
-//        {
-//            if(countSumm16<=mSettings.getInt(getString(R.string.mospilan), 0))
-//            {
-//                delFromRaschet16= mSettings.getInt(getString(R.string.mospilan), 0) - countSumm16;
-//                editor.putInt(getString(R.string.mospilan),delFromRaschet16);
-//            }else{
-//                editor.putInt(getString(R.string.mospilan),delFromRaschet16);
-//            }
-//        }
-//        if(countSumm17>0)
-//        {
-//            if(countSumm17<=mSettings.getInt(getString(R.string.vuskalKombiB), 0))
-//            {
-//                delFromRaschet17= mSettings.getInt(getString(R.string.vuskalKombiB), 0) - countSumm17;
-//                editor.putInt(getString(R.string.vuskalKombiB),delFromRaschet17);
-//            }else{
-//                editor.putInt(getString(R.string.vuskalKombiB),delFromRaschet17);
-//            }
-//        }
-//        if(countSumm18>0)
-//        {
-//            if(countSumm18<=mSettings.getInt(getString(R.string.maksikropZavyaz), 0))
-//            {
-//                delFromRaschet18= mSettings.getInt(getString(R.string.maksikropZavyaz), 0) - countSumm18;
-//                editor.putInt(getString(R.string.maksikropZavyaz),delFromRaschet18);
-//            }else{
-//                editor.putInt(getString(R.string.maksikropZavyaz),delFromRaschet18);
-//            }
-//        }
-//        editor.apply();
-//
-//    }
     private void msgToIformAlert() {
         msgToInform=getString(R.string.msgToInform);
         if (preparat1.equals("")!=true)
@@ -933,7 +736,6 @@ public class Calculate extends Fragment{
     }
 
     private void allarms() {
-        int possFor;
         String mess = "";
         builder.setTitle(R.string.allarmTitle)
                 .setCancelable(false)
@@ -944,10 +746,7 @@ public class Calculate extends Fragment{
                             }
                         });
         for (int i=1;i<=4;i++) {
-
-            possFor=i;
-
-            if (spinner2.getSelectedItemPosition() == possFor) {
+            if (spinner2.getSelectedItemPosition() == i) {
                 if (spinner1.getSelectedItemPosition() == 1) {
                     mess+= getString(R.string.horusAlert)+"\n";
                     spinner2.setSelection(0);
@@ -956,23 +755,15 @@ public class Calculate extends Fragment{
             }
         }
         for (int i=1;i<=4;i++) {
-
-            possFor=i;
-
-            if (spinner2.getSelectedItemPosition() == possFor) {
+            if (spinner2.getSelectedItemPosition() == i) {
                 if (spinner1.getSelectedItemPosition() == 4) {
                     mess+= getString(R.string.strobiAlert)+"\n";
-
                     spinner2.setSelection(0);
                 }
-
             }
         }
         for (int i=1;i<=4;i++) {
-
-            possFor=i;
-
-            if (spinner2.getSelectedItemPosition() == possFor) {
+            if (spinner2.getSelectedItemPosition() == i) {
                 if (spinner1.getSelectedItemPosition() == 5) {
                     mess+= getString(R.string.kvadrisAlert)+"\n";
                     spinner2.setSelection(0);
@@ -1004,17 +795,15 @@ public class Calculate extends Fragment{
             }
 
         }
-        if (spinner1.getSelectedItemPosition()==2)
-        {
+        switch (spinner1.getSelectedItemPosition()){
+            case(2):
             if (spinner2.getSelectedItemPosition() == 0) {
 
                 mess= getString(R.string.oidiumAlert)+"\n";
 
                 spinner2.setSelection(1);
             }
-        }
-        if (spinner1.getSelectedItemPosition()==3)
-        {
+            case(3):
             if (spinner2.getSelectedItemPosition() == 0) {
 
                 mess= getString(R.string.oidiumAlert)+"\n";
@@ -1034,7 +823,8 @@ public class Calculate extends Fragment{
         needBuy17=0;needBuy18=0;
         countSumm17=0; countSumm18=0;
 
-        if (poss5 == 1) {
+        switch (poss5){
+            case(1):
             preparat5=getString(R.string.vuskalKombiB);
             count17 = mSettings.getInt(getString(R.string.vuskalKombiB), 0);
             countSumm17 = 12 * count;
@@ -1042,8 +832,8 @@ public class Calculate extends Fragment{
             if (count17 <countSumm17) {
                 needBuy17 = 12 * count - count17;
             }
-        }
-        if (poss5 == 2) {
+                break;
+            case(2):
             preparat5=getString(R.string.maksikropZavyaz);
             count18 = mSettings.getInt(getString(R.string.maksikropZavyaz), 0);
             countSumm18 = 50 * count;
@@ -1051,6 +841,7 @@ public class Calculate extends Fragment{
             if (count18 < 50 * count) {
                 needBuy18 = 50 * count - count18;
             }
+                break;
         }
     }
 
@@ -1059,7 +850,8 @@ public class Calculate extends Fragment{
         needBuy14=0;needBuy15=0;needBuy16=0;
         countSumm14=0; countSumm15=0; countSumm16=0;
 
-        if (poss4 == 1) {
+        switch (poss4){
+            case(1):
             preparat4=getString(R.string.sanmayt);
             count14 = mSettings.getInt(getString(R.string.sanmayt), 0);
             countSumm14 = 12 * count;
@@ -1067,22 +859,23 @@ public class Calculate extends Fragment{
             if (count14 < 12 * count) {
                 needBuy14 = 12 * count - count14;
             }
-        }
-        if (poss4 == 2) {
+                break;
+            case(2):
             preparat4=getString(R.string.decis);
             count15 = mSettings.getInt(getString(R.string.decis), 0);
             countSumm15 = 50 * count;
             if (count15 < 50 * count) {
                 needBuy15 = 50 * count - count15;
             }
-        }
-        if (poss4 == 3) {
+                break;
+            case(3):
             preparat4=getString(R.string.mospilan);
             count16 = mSettings.getInt(getString(R.string.mospilan), 0);
             countSumm16 = 50 * count;
             if (count16 < 50 * count) {
                 needBuy16 = 50 * count - count16;
             }
+                break;
         }
     }
 
@@ -1092,7 +885,8 @@ public class Calculate extends Fragment{
         needBuy11=0;needBuy12=0;needBuy13=0;
         countSumm11=0; countSumm12=0; countSumm13=0;
 
-        if (poss3 == 1) {
+        switch (poss3){
+            case(1):
             preparat3=getString(R.string.plantafol30);
             count11 = mSettings.getInt(getString(R.string.plantafol30), 0);
             countSumm11 = 12 * count;
@@ -1100,8 +894,8 @@ public class Calculate extends Fragment{
             if (count11 < 12 * count) {
                 needBuy11 = 12 * count - count11;
             }
-        }
-        if (poss3 == 2) {
+                break;
+            case(2):
             preparat3=getString(R.string.plantafol20);
             count12 = mSettings.getInt(getString(R.string.plantafol20), 0);
             countSumm12 = 50 * count;
@@ -1109,8 +903,8 @@ public class Calculate extends Fragment{
             if (count12 < 50 * count) {
                 needBuy12 = 50 * count - count12;
             }
-        }
-        if (poss3 == 3) {
+                break;
+            case(3):
             preparat3=getString(R.string.plantafol5);
             count13 = mSettings.getInt(getString(R.string.plantafol5), 0);
             countSumm13 = 50 * count;
@@ -1118,6 +912,7 @@ public class Calculate extends Fragment{
             if (count13 < 50 * count) {
                 needBuy13 = 50 * count - count13;
             }
+                break;
         }
     }
 
@@ -1127,39 +922,39 @@ public class Calculate extends Fragment{
         needBuy7=0;needBuy8=0;needBuy9=0;needBuy10=0;
         countSumm7=0; countSumm8=0; countSumm9=0; countSumm10=0;
 
-
-        if (poss2 == 1) {
+        switch (poss2){
+            case(1):
             preparat2=getString(R.string.topaz);
             count7 = mSettings.getInt(getString(R.string.topaz), 0);
             countSumm7 = 12 * count;
-
             if (count7 < 12 * count) {
                 needBuy7 = 12 * count - count7;
             }
-        }
-        if (poss2 == 2) {
+                break;
+        case(2):
             preparat2=getString(R.string.topsin);
             count8 = mSettings.getInt(getString(R.string.topsin), 0);
             countSumm8 = 50 * count;
             if (count8 < 50 * count) {
                 needBuy8 = 50 * count - count8;
             }
-        }
-        if (poss2 == 3) {
+            break;
+            case(3):
             preparat2=getString(R.string.falkon);
             count9 = mSettings.getInt(getString(R.string.falkon), 0);
             countSumm9 = 50 * count;
             if (count9 < 50 * count) {
                 needBuy9 = 50 * count - count9;
             }
-        }
-        if (poss2 == 4) {
+                break;
+            case(4):
             preparat2=getString(R.string.tilt);
             count10 = mSettings.getInt(getString(R.string.tilt), 0);
             countSumm10 = 3 * count;
             if (count10 < 3 * count) {
                 needBuy10 = 3 * count - count10;
             }
+                break;
         }
     }
 
@@ -1169,283 +964,232 @@ public class Calculate extends Fragment{
         needBuy1 = 0; needBuy2 = 0; needBuy3 = 0; needBuy4 = 0; needBuy5 = 0; needBuy6 = 0;
         countSumm1=0; countSumm2=0; countSumm3=0; countSumm4=0; countSumm5=0; countSumm6=0;
 
-        if (poss1 == 1) {
+        switch (poss1){
 
+            case(1):
             preparat1 = getString(R.string.horus);
             count1 = mSettings.getInt(getString(R.string.horus), 0);
-            if(mSettings.contains(getString(R.string.oprSelect6)) == true)
-            {
-                countSumm1=mSettings.getInt(getString(R.string.horusSumm),0);
-            }
-
             countSumm1 = 12 * count;
-
-            if (count1 < 12 * count) {
-                needBuy1 = 12 * count - count1;
+            if (count1 < countSumm1) {
+                needBuy1 = countSumm1 - count1;
             }
-        }
-        if (poss1 == 2) {
+             break;
+            case(2):
             preparat1 = getString(R.string.ridomil);
             count2 = mSettings.getInt(getString(R.string.ridomil), 0);
             countSumm2 = 50 * count;
 
-            if (count2 < 50 * count) {
-                needBuy2 = 50 * count - count2;
+            if (count2 < countSumm2) {
+                needBuy2 = countSumm2 - count2;
             }
-        }
-        if (poss1 == 3) {
+                break;
+            case(3):
             preparat1 = getString(R.string.melodiduo);
             count3 = mSettings.getInt(getString(R.string.melodiduo), 0);
             countSumm3 = 50 * count;
 
-            if (count3 < 50 * count) {
-                needBuy3 = 50 * count - count3;
+            if (count3 < countSumm3) {
+                needBuy3 = countSumm3 - count3;
             }
-        }
-        if (poss1 == 4) {
+                break;
+            case(4):
             preparat1 = getString(R.string.strobi);
             count4 = mSettings.getInt(getString(R.string.strobi), 0);
             countSumm4 = 3 * count;
 
-            if (count4 < 3 * count) {
-                needBuy4 = 3 * count - count4;
+            if (count4 < countSumm4) {
+                needBuy4 = countSumm4 - count4;
             }
-        }
-        if (poss1 == 5) {
-
+                break;
+            case(5):
             preparat1 = getString(R.string.kvadris);
             count5 = mSettings.getInt(getString(R.string.kvadris), 0);
             countSumm5 = 6 * count;
 
-            if (count5 >= 6 * count) {
-                needBuy5 = 6 * count - count5;
+            if (count5 < countSumm5) {
+                needBuy5 = countSumm5 - count5;
             }
-        }
-        if (poss1 == 6) {
+                break;
+            case(6):
             preparat1 = getString(R.string.kuproksat);
             count6 = mSettings.getInt(getString(R.string.kuproksat), 0);
             countSumm6 = 100 * count;
 
-            if (count6 >= 100 * count) {
+            if (count6 < countSumm6) {
                 needBuy6 = 100 * count - count6;
             }
+                break;
         }
     }
 
+    private void countVedra() {
 
-
-    private void vedra() {
-
-        if (vedro.getText().toString().equals("")) {
+        if (vedro.getText().toString().isEmpty()) {
             count = 1;
             vedro.setText(String.valueOf(count));
         }
 
 
     }
-
-
-
     private void ifSelectedItem5() {
-        if (poss==0)
-        {
-            spinner5.setSelection(0);
+        switch (poss){
+            case 0:
+                spinner5.setSelection(0);
+                break;
+            case 1:
+                spinner5.setSelection(0);
+                break;
+            case 2:
+                spinner5.setSelection(2);
+                break;
+            case 3:
+                spinner5.setSelection(0);
+                break;
+            case 4:
+                spinner5.setSelection(0);
+                break;
+            case 5:
+                spinner5.setSelection(0);
+                break;
+            case 6:
+                spinner5.setSelection(0);
+                break;
+            case 7:
+                spinner5.setSelection(0);
+                break;
+            case 8:
+                spinner5.setSelection(0);
+                break;
         }
-        if (poss==1)
-        {
-            spinner5.setSelection(1);
-        }
-        if (poss==2)
-        {
-            spinner5.setSelection(2);
-        }
-        if (poss==3)
-        {
-            spinner5.setSelection(0);
-        }
-        if (poss==4)
-        {
-            spinner5.setSelection(0);
-        }
-        if (poss==5)
-        {
-            spinner5.setSelection(0);
-        }
-        if (poss==6)
-        {
-            spinner5.setSelection(0);
-        }
-        if (poss==7)
-        {
-            spinner5.setSelection(0);
-        }
-        if (poss==8)
-        {
-            spinner5.setSelection(0);
-        }
-
     }
 
     private void ifSelectedItem4() {
-        if (poss==0)
-        {
+        switch (poss){
+            case 0:
             spinner4.setSelection(1);
+            break;
+            case 1:
+                spinner4.setSelection(2);
+                break;
+            case 2:
+                spinner4.setSelection(0);
+                break;
+            case 3:
+                spinner4.setSelection(2);
+                break;
+            case 4:
+                spinner4.setSelection(3);
+                break;
+            case 5:
+                spinner4.setSelection(2);
+                break;
+            case 6:
+                spinner4.setSelection(0);
+                break;
+            case 7:
+                spinner4.setSelection(0);
+                break;
+            case 8:
+                spinner4.setSelection(0);
+                break;
         }
-        if (poss==1)
-        {
-            spinner4.setSelection(2);
-        }
-        if (poss==2)
-        {
-            spinner4.setSelection(0);
-        }
-        if (poss==3)
-        {
-            spinner4.setSelection(2);
-        }
-        if (poss==4)
-        {
-            spinner4.setSelection(3);
-        }
-        if (poss==5)
-        {
-            spinner4.setSelection(2);
-        }
-        if (poss==6)
-        {
-            spinner4.setSelection(0);
-        }
-        if (poss==7)
-        {
-            spinner4.setSelection(0);
-        }
-        if (poss==8)
-        {
-            spinner4.setSelection(0);
-        }
-
     }
 
     private void ifSelectedItem3() {
-        if (poss==0)
-        {
-            spinner3.setSelection(1);
+        switch (poss){
+            case 0:
+                spinner3.setSelection(1);
+                break;
+            case 1:
+                spinner3.setSelection(0);
+                break;
+            case 2:
+                spinner3.setSelection(0);
+                break;
+            case 3:
+                spinner3.setSelection(2);
+                break;
+            case 4:
+                spinner3.setSelection(1);
+                break;
+            case 5:
+                spinner3.setSelection(2);
+                break;
+            case 6:
+                spinner3.setSelection(2);
+                break;
+            case 7:
+                spinner3.setSelection(3);
+                break;
+            case 8:
+                spinner3.setSelection(0);
+                break;
         }
-        if (poss==1)
-        {
-            spinner3.setSelection(0);
-        }
-        if (poss==2)
-        {
-            spinner3.setSelection(0);
-        }
-        if (poss==3)
-        {
-            spinner3.setSelection(2);
-        }
-        if (poss==4)
-        {
-            spinner3.setSelection(1);
-        }
-        if (poss==5)
-        {
-            spinner3.setSelection(2);
-        }
-        if (poss==6)
-        {
-            spinner3.setSelection(2);
-        }
-        if (poss==7)
-        {
-            spinner3.setSelection(3);
-        }
-        if (poss==8)
-        {
-            spinner3.setSelection(0);
-        }
-
     }
 
     private void ifSelectedItem2() {
-        if (poss==0)
-        {
+        switch (poss){
+            case 0:
             spinner2.setSelection(0);
+                break;
+            case 1:
+                spinner2.setSelection(2);
+                break;
+            case 2:
+                spinner2.setSelection(0);
+                break;
+            case 33:
+                spinner2.setSelection(0);
+                break;
+            case 4:
+                spinner2.setSelection(3);
+                break;
+            case 5:
+                spinner2.setSelection(0);
+                break;
+            case 6:
+                spinner2.setSelection(0);
+                break;
+            case 7:
+                spinner2.setSelection(4);
+                break;
+            case 8:
+                spinner2.setSelection(0);
+                break;
         }
-        if (poss==1)
-        {
-            spinner2.setSelection(2);
-        }
-        if (poss==2)
-        {
-            spinner2.setSelection(0);
-        }
-        if (poss==3)
-        {
-            spinner2.setSelection(0);
-        }
-        if (poss==4)
-        {
-            spinner2.setSelection(3);
-        }
-        if (poss==5)
-        {
-            spinner2.setSelection(0);
-        }
-        if (poss==6)
-        {
-            spinner2.setSelection(0);
-        }
-        if (poss==7)
-        {
-            spinner2.setSelection(4);
-        }
-        if (poss==8)
-        {
-            spinner2.setSelection(0);
-        }
-
     }
-
     private void ifSelectedItem1() {
-        if (poss==0)
-        {
-            spinner1.setSelection(1);
-        }
-        if (poss==1)
-        {
-            spinner1.setSelection(2);
-        }
-        if (poss==2)
-        {
-            spinner1.setSelection(0);
-        }
-        if (poss==3)
-        {
-            spinner1.setSelection(5);
-        }
-        if (poss==4)
-        {
-            spinner1.setSelection(3);
-        }
-        if (poss==5)
-        {
-            spinner1.setSelection(1);
-        }
-        if (poss==6)
-        {
-            spinner1.setSelection(4);
-        }
-        if (poss==7)
-        {
-            spinner1.setSelection(6);
-        }
-        if (poss==8)
-        {
-            spinner1.setSelection(6);
-        }
 
+        switch (poss){
+            case 0:
+            spinner1.setSelection(1);
+            break;
+            case 1:
+                spinner1.setSelection(2);
+                break;
+            case 2:
+                spinner1.setSelection(0);
+                break;
+            case 3:
+                spinner1.setSelection(5);
+                break;
+            case 4:
+                spinner1.setSelection(3);
+                break;
+            case 5:
+                spinner1.setSelection(1);
+                break;
+            case 6:
+                spinner1.setSelection(4);
+                break;
+            case 7:
+                spinner1.setSelection(6);
+                break;
+            case 8:
+                spinner1.setSelection(6);
+                break;
+        }
     }
-
     public static int getWhatRaschCreated() {
         return whatRaschCreated;
     }
