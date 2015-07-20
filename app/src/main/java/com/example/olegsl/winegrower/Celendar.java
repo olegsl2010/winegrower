@@ -233,8 +233,6 @@ public class Celendar extends Fragment{
             editor.putString(getString(R.string.opr9), (String) date9.getText());
         }
         editor.apply();
-        System.out.println(date1);
-// ggfjtdyydt
 
     }
     private void selectedDates() {
